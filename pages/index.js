@@ -1,8 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
+import { dummyCelebrities } from "#/dummy";
+import { signs } from "#/signs";
 import { capitalize } from "#/utils";
+import Header from "~/layout/Header";
+import Celebrity from "~/Cards/Celebrity";
 import Button from "~/core/Button";
+import CategoryCard from "~/Cards/CategoryCard";
+import { heroCategories } from "#/dummy";
+import Footer from "~/layout/Footer";
 import Layout from "~/layout/Layout";
+import Autoscroll from "~/core/Autoscroll";
 
 export default function Home() {
 	return (
@@ -14,7 +22,152 @@ export default function Home() {
 			</Head>
 
 			<Layout>
-				<main id="main-content"></main>
+				<main id="main-content">
+					<section
+						id="hero"
+						className="grid grid-cols-2 items-center px-24 mx-auto background-gradient"
+					>
+						<div className="space-y-4">
+							<h1 className="text-3xl md:text-4xl lg:text-6xl leading-[72px] text-center lg:text-left text-white font-display font-bold mb-10">
+								<span>Iro is here to</span>
+								<br />
+								<span>motivate and</span> <br />
+								<span>inspire</span>
+							</h1>
+							<p className="text-lg text-white w-3/4">
+								Are you ready to become a hero of your own life? Look no further
+								than Iro, the premier motivation website that uses astrology and
+								your zodiac sign to inspire and guide you on your journey.
+							</p>
+						</div>
+						<div className="w-full grid grid-cols-3 gap-6">
+							{heroCategories.map((categoryData) => (
+								<CategoryCard data={categoryData} key={categoryData.id} />
+							))}
+						</div>
+					</section>
+					<Autoscroll />
+					<section
+						id="aries-celebrities"
+						className="px-2 md:px-12 lg:px-24 my-20"
+					>
+						<div className="flex justify-center space-x-3 leading-tight my-4">
+							<Image
+								src="/aries.svg"
+								alt="Aries symbol"
+								width={35}
+								height={35}
+							/>
+							<h2 className="text-xl md:text-2xl lg:text-4xl text-center font-semibold font-display">
+								Aries Celebrities
+							</h2>
+						</div>
+						<p className="text-center w-3/4 mx-auto mb-8 text-xl font-medium">
+							Aries is a passionate, motivated, and confident leader who builds
+							community with their cheerful disposition and relentless
+							determination.
+						</p>
+						<div className="grid grid-cols-3 gap-8">
+							{dummyCelebrities.map((celebrity) => {
+								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
+							})}
+						</div>
+						<Button className="mt-8">More</Button>
+					</section>
+					<Autoscroll />
+					{/* Scorpio */}
+					<section
+						id="scorpio-celebrities"
+						className="px-2 md:px-12 lg:px-24 my-20"
+					>
+						<div className="flex justify-center items-center space-x-3 leading-tight my-4">
+							<Image
+								src="/scorpio.svg"
+								alt="Scorpio symbol"
+								width={35}
+								height={35}
+							/>
+							<h2 className="text-xl md:text-2xl lg:text-4xl text-center font-semibold font-display">
+								Scorpio Celebrities
+							</h2>
+						</div>
+						<p className="text-center w-3/4 mx-auto mb-8 text-xl font-medium">
+							Scorpios are known for being tough-minded and biting, but they
+							also have lots of positive qualities that make them great friends
+							and successful people overall.
+						</p>
+						<div className="grid grid-cols-3 gap-8">
+							{dummyCelebrities.map((celebrity) => {
+								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
+							})}
+						</div>
+						<Button className="my-8">More</Button>
+						<section
+							id=""
+							className="grid grid-cols-2 items-center mt-20 mb-40"
+						>
+							<div className="w-[70%] space-y-6">
+								<h1 className="text-3xl font-display font-bold">
+									Recommendation
+								</h1>
+								<p className="font-medium text-xl">
+									The fact that people have achieved a great deal for themselves
+									shows you that you can achieve the same thing.
+								</p>
+								<p className="font-medium text-xl">
+									There are a number of categories of signs that you can explore
+									in order to get inspiration and motivation.
+								</p>
+							</div>
+							<div className="w-full grid grid-cols-3 gap-10">
+								{heroCategories.map((categoryData) => (
+									<CategoryCard data={categoryData} key={categoryData.id} />
+								))}
+							</div>
+						</section>
+					</section>
+					<ul className="bg-gray-700 text-white text-xl py-5 flex items-center space-x-6 overflow-x-hidden">
+						{signs.map(({ label, image }) => (
+							<li key={label} className="flex space-x-6">
+								<span>{label}</span>
+								<Image
+									src={image}
+									alt={`${label}'s symbol`}
+									width={30}
+									height={30}
+								/>
+							</li>
+						))}
+					</ul>
+					{/* Libra */}
+					<section
+						id="libra-celebrities"
+						className="px-2 md:px-12 lg:px-24 my-20"
+					>
+						<div className="flex justify-center items-center space-x-3 leading-tight my-4">
+							<Image
+								src="/libra.svg"
+								alt="Scorpio symbol"
+								width={35}
+								height={35}
+							/>
+							<h2 className="text-xl md:text-2xl lg:text-4xl text-center font-semibold font-display">
+								Libra Celebrities
+							</h2>
+						</div>
+						<p className="text-center w-1/2 mx-auto mb-8">
+							Scorpios are known for being tough-minded and biting, but they
+							also have lots of positive qualities that make them great friends
+							and successful people overall.
+						</p>
+						<div className="grid grid-cols-3 gap-8">
+							{dummyCelebrities.map((celebrity) => {
+								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
+							})}
+						</div>
+						<Button className="my-8">More</Button>
+					</section>
+				</main>
 			</Layout>
 			<style jsx>
 				{`
