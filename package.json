@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/inter": "^4.5.14",
+    "@fontsource/lato": "^4.5.10",
+    "@heroicons/react": "^2.0.13",
     "@next/font": "13.1.1",
+    "date-fns": "^2.29.3",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
+    "focus-trap-react": "^10.0.2",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
