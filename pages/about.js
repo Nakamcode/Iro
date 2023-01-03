@@ -30,10 +30,10 @@ const About = () => {
 					<div className="hidden lg:grid grid-cols-3 lg:grid-cols-3 lg:grid-rows-3 gap-6">
 						<div className="hidden lg:block relative lg:row-span-2 lg:col-span-2 w-[270px] h-[300px] lg:w-full lg:h-[400px] sm:h-full rounded-lg shadow-[0px_0px_19px_rgba(133, 129, 129, 0.34)]">
 							<Image
-								src="/profile.png"
+								src="/myProfile.jpg"
 								alt="developer profile image"
 								fill
-								className="object-contain lg:object-cover"
+								className="object-cover rounded-lg"
 							/>
 						</div>
 						{portfolioCategories.slice(0, 5).map((data) => (
@@ -44,25 +44,26 @@ const About = () => {
 						<div>
 							<div className="relative w-[270px] h-[300px] rounded-lg shadow-[0px_0px_19px_rgba(133, 129, 129, 0.34)]">
 								<Image
-									src="/profile.png"
+									src="/myProfile.jpg"
 									alt="developer profile image"
 									fill
-									className="object-contain"
+									className="object-cover rounded-lg"
 								/>
 							</div>
 							<div className="flex items-center pl-3 mt-2 space-x-4">
 								<Image src="/leo.svg" alt="leo logo" width={20} height={20} />
-								<span className="text-lg font-semibold">Nana Asamoah</span>
+								<span className="text-lg font-semibold">
+									Afriyie Samuel Kwesi
+								</span>
 							</div>
-							<p className="pl-3 text-base font-medium">
-								Frontend Dev{"("}UI/UX{")"}
-							</p>
+							<p className="pl-3 text-base font-medium">Frontend Developer</p>
 							<a
-								href="/nakam"
+								href="https://kwesi-dev.vercel.app/"
 								target="_blank"
+								rel="noreferrer"
 								className="pl-3 text-base font-medium text-[#2295FF]"
 							>
-								@nakam360
+								@kwesidev
 							</a>
 						</div>
 					</div>

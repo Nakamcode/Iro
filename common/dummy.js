@@ -226,20 +226,20 @@ export const heroCategories = [
 export const portfolioCategories = [
 	{
 		id: 1,
-		label: "Visual Designer",
+		label: "FE Developer",
 		name: "Pisces",
 		path: "/leo_w.svg",
 	},
 	{
 		id: 2,
-		label: "UI Designer",
+		label: "Typescript",
 		name: "Capricorn",
 		path: "/leo_w.svg",
 	},
 	{
 		id: 3,
 		name: "Leo",
-		label: "FE Developer",
+		label: "Team Player",
 		path: "/leo_w.svg",
 	},
 	{
