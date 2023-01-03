@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
 	return (
 		<>
 			<Header />
-			{children}
+			<div className="relative top-[80px]">{children}</div>
 			<Footer />
 		</>
 	);
