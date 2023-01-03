@@ -6,6 +6,7 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 import IconButton from "../core/IconButton";
 import { navigation } from "#/navigation";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Sidebar = ({ handleClose, open }) => {
 	const { pathname } = useRouter();
@@ -23,6 +24,14 @@ const Sidebar = ({ handleClose, open }) => {
 					open ? "visible translate-x-0" : "-translate-x-full"
 				}`}
 			>
+				<Link href="/">
+					<div className="flex items-center space-x-2 absolute left-4 top-6">
+						<Image src="/logo.png" alt="logo" width={30} height={30} />
+						<span className="text-white text-4xl sm:text-xl font-bold font-display">
+							Iro
+						</span>
+					</div>
+				</Link>
 				<IconButton
 					aria-label="close side navbar"
 					className="absolute right-4 top-3"
