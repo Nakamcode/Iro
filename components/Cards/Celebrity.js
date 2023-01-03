@@ -12,20 +12,23 @@ const Celebrity = ({ celebrity }) => {
 		"Zodiac Sign": `${sign} ${signs.find(({ label }) => label === sign).icon}`,
 	};
 	return (
-		<div key={celebrity.id} className="card rounded-xl mt-8 shadow-lg">
+		<div
+			key={celebrity.id}
+			className="w-full card rounded-xl mt-8 sm:mt-4 shadow-lg"
+		>
 			<div className="w-full h-52 relative">
 				<Image
 					src={celebrity.imgURL}
 					alt={celebrity.name}
-					className="rounded-t-xl"
+					className="rounded-t-xl sm:object-cover"
 					fill
 				/>
 			</div>
-			<div className="content space-y-5 p-5">
-				<h3 className="text-2xl font-semibold font-display leading-relaxed">
+			<div className="content space-y-5 sm:space-y-2 p-5">
+				<h3 className="text-2xl sm:text-xl font-semibold font-display leading-relaxed">
 					{celebrity.name}
 				</h3>
-				<div className="props">
+				<div className="props sm:text-sm">
 					{Object.entries(attributes).map(([key, value]) => (
 						<p key={key}>
 							<strong>{key}: </strong>
@@ -33,7 +36,7 @@ const Celebrity = ({ celebrity }) => {
 						</p>
 					))}
 				</div>
-				<p className="font-medium">
+				<p className="font-medium sm:text-sm">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
 					veritatis rem amet obcaecati explicabo dolorum mollitia molestiae nisi
 					tempore ea...
@@ -48,11 +51,6 @@ const Celebrity = ({ celebrity }) => {
 					</a>
 				</p>
 			</div>
-			<style jsx>{`
-				.card {
-					width: min(370px, 100%);
-				}
-			`}</style>
 		</div>
 	);
 };

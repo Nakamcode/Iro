@@ -7,6 +7,12 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
+		screens: {
+			lg: { max: "900px" },
+			md: { max: "769px" },
+			sm: { max: "428px" },
+			xs: { max: "375px" },
+		},
 		extend: {
 			fontFamily: {
 				sans: ["Inter", ...defaultTheme.fontFamily.sans],

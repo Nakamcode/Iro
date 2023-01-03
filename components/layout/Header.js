@@ -17,21 +17,21 @@ const Header = () => {
 	const closeSidebar = () => setIsSidebarOpen(false);
 
 	return (
-		<header className="sticky top-0 bg-indigo-700 px-2 md:px-12 lg:px-24 py-5 flex items-center justify-between z-30 shadow-sm shadow-indigo-900">
+		<header className="sticky top-0 bg-indigo-700 px-24 md:px-12 sm:px-5 py-5 flex items-center justify-between z-30 shadow-sm shadow-indigo-900">
 			<div className="flex space-x-2 items-center">
-				<IconButton onClick={openSidebar} className="sm:hidden">
-					<Bars3Icon className="w-5 h-5 text-white" />
-				</IconButton>
 				<Link href="/">
 					<div className="flex items-center space-x-2">
 						<Image src="/logo.png" alt="logo" width={30} height={30} />
-						<span className="text-white text-4xl font-bold font-display">
+						<span className="text-white text-4xl sm:text-xl font-bold font-display">
 							Iro
 						</span>
 					</div>
 				</Link>
 			</div>
-			<nav className="hidden sm:block">
+			<IconButton onClick={openSidebar} className="hidden lg:block">
+				<Bars3Icon className="w-5 h-5 text-white" />
+			</IconButton>
+			<nav className="lg:hidden block">
 				<ul className="flex space-x-10">
 					{Object.entries(navigation).map(([label, path]) => (
 						<li key={label}>

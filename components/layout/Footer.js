@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
 	return (
 		<>
-			<footer className="background-gradient w-full text-white h-[120px] px-24 flex flex-col items-center justify-center">
-				<div className="w-full flex justify-between items-center mb-2 font-medium text-lg">
+			<footer className="background-gradient w-full text-white h-[120px] md:h-fit md:py-12 sm:px-5 px-24 md:px-12 flex flex-col items-center justify-center md:items-start">
+				<div className="md:hidden w-full flex justify-between items-center mb-2 font-medium text-lg">
 					<p>&copy; Iro 2022</p>
 					<ul className="flex items-center space-x-8">
 						<li className="underline cursor-pointer">Code on Github</li>
@@ -13,7 +13,26 @@ const Footer = () => {
 					</ul>
 					<p>JAMstack</p>
 				</div>
-				<p className="text-sm">
+				<div className="w-full hidden md:flex mb-2 text-lg md:mb-10">
+					<div className="w-full md:flex justify-between items-center sm:text-[15px]">
+						<div>
+							<p className="underline cursor-pointer">Code on Github</p>
+							<p className="underline cursor-pointer items-end">
+								Give me feedback
+							</p>
+						</div>
+						<div>
+							<p className="cursor-pointer">Powered by</p>
+							<p className="underline cursor-pointer font-semibold">
+								Vercel & Xata
+							</p>
+						</div>
+					</div>
+				</div>
+				<p className="w-full text-center mb-2">
+					&copy; Iro 2022 : <strong className="font-semibold">JAMstack</strong>
+				</p>
+				<p className="w-full text-center text-sm">
 					No pixels was harm in production of this project
 				</p>
 			</footer>

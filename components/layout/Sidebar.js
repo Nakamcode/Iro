@@ -30,7 +30,7 @@ const Sidebar = ({ handleClose, open }) => {
 				>
 					<XMarkIcon className="w-6 h-6" />
 				</IconButton>
-				<ul className="space-y-8 flex flex-col ml-8">
+				<ul className="space-y-8 flex flex-col justify-center items-center ml-8">
 					{Object.entries(navigation).map(([label, path]) => (
 						<li key={label}>
 							<Link
