@@ -9,7 +9,7 @@ const Footer = () => {
 					<ul className="flex items-center space-x-8">
 						<li className="underline cursor-pointer">Code on Github</li>
 						<li className="underline cursor-pointer">Powered by Vercel</li>
-						<li className="underline cursor-pointer">Give me feedback</li>
+						<li className="underline cursor-pointer">Give a feedback</li>
 					</ul>
 					<p>JAMstack</p>
 				</div>
@@ -18,13 +18,15 @@ const Footer = () => {
 						<div>
 							<p className="underline cursor-pointer">Code on Github</p>
 							<p className="underline cursor-pointer items-end">
-								Give me feedback
+								Give a feedback
 							</p>
 						</div>
 						<div>
 							<p className="cursor-pointer">Powered by</p>
-							<p className="underline cursor-pointer font-semibold">
-								Vercel & Xata
+							<p className="cursor-pointer font-semibold flex space-x-1.5">
+								<p className="underline">Vercel </p>
+								<p>&</p>
+								<p className="underline"> Xata</p>
 							</p>
 						</div>
 					</div>

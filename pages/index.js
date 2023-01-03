@@ -72,7 +72,7 @@ export default function Home() {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
-						<Button className="mt-8 sm:w-full">More</Button>
+						<Button className="mt-8 sm:w-full font-bold">More</Button>
 					</section>
 					<Autoscroll />
 					{/* Scorpio */}
