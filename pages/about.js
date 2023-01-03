@@ -22,7 +22,7 @@ const About = () => {
 					</p>
 				</header>
 				<div className="grid grid-cols-2 lg:grid-cols-1 gap-10 items-center sm:mb-10">
-					<div className="grid grid-cols-3 lg:grid-cols-3 grid-rows-3 gap-6">
+					<div className="grid grid-cols-3 lg:grid-cols-3 lg:grid-rows-3 gap-6">
 						<div className="hidden lg:block relative lg:row-span-2 lg:col-span-2 w-[270px] h-[300px] lg:w-full lg:h-[400px] sm:h-full rounded-lg shadow-[0px_0px_19px_rgba(133, 129, 129, 0.34)]">
 							<Image
 								src="/profile.png"
@@ -31,7 +31,7 @@ const About = () => {
 								className="object-contain lg:object-cover"
 							/>
 						</div>
-						{portfolioCategories.slice(0, 5).map((data) => (
+						{portfolioCategories.map((data) => (
 							<CategoryCard data={data} key={data.id} />
 						))}
 					</div>
