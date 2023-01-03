@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
 	return (
 		<>
-			<footer className="background-gradient w-full text-white h-[120px] md:h-fit md:py-12 sm:px-5 px-24 md:px-12 flex flex-col items-center justify-center md:items-start">
+			<footer className="background-gradient w-full text-white relative mt-[80px] h-[120px] md:h-fit md:py-12 sm:px-5 px-24 md:px-12 flex flex-col items-center justify-center md:items-start">
 				<div className="md:hidden w-full flex justify-between items-center mb-2 font-medium text-lg">
 					<p>&copy; Iro 2022</p>
 					<ul className="flex items-center space-x-8">
