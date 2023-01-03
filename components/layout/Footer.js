@@ -8,7 +8,7 @@ const Footer = () => {
 					<p>&copy; Iro 2022</p>
 					<ul className="flex items-center space-x-8">
 						<li className="underline cursor-pointer">Code on Github</li>
-						<li className="underline cursor-pointer">Powered by Netlify</li>
+						<li className="underline cursor-pointer">Powered by Vercel</li>
 						<li className="underline cursor-pointer">Give me feedback</li>
 					</ul>
 					<p>JAMstack</p>
@@ -29,11 +29,12 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-				<p className="w-full text-center mb-2">
-					&copy; Iro 2022 : <strong className="font-semibold">JAMstack</strong>
+				<p className="hidden md:block w-full text-center mb-2">
+					&copy; Iro 2022 :{" "}
+					<strong className="font-semibold underline">JAMstack</strong>
 				</p>
 				<p className="w-full text-center text-sm">
-					No pixels was harm in production of this project
+					No pixels was harm 💔 in production of this project{" "}
 				</p>
 			</footer>
 			<style jsx>
