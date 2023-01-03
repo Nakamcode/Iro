@@ -41,7 +41,9 @@ const CategoryCard = ({ data }) => {
 					<Image src={data.path} alt="category symbol" fill />
 				</div>
 			</div>
-			<p className="text-lg font-semibold sm:text-sm">{data.label}</p>
+			<p className="text-lg font-semibold sm:text-sm text-center">
+				{data.label}
+			</p>
 		</div>
 	);
 };
