@@ -72,7 +72,9 @@ export default function Home() {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
-						<Button className="mt-8 sm:w-full font-bold">More</Button>
+						<Button className="mt-8 sm:w-full font-bold py-3 px-10 w-[30%]">
+							More
+						</Button>
 					</section>
 					<Autoscroll />
 					{/* Scorpio */}
@@ -101,7 +103,9 @@ export default function Home() {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
-						<Button className="my-8 sm:w-full">More</Button>
+						<Button className="my-8 sm:w-full font-bold py-3 px-10 w-[30%]">
+							More
+						</Button>
 						<section
 							id=""
 							className="grid grid-cols-2 lg:grid-cols-1 items-center mt-20 mb-40 sm:mt-10 sm:mb-20"
@@ -165,7 +169,7 @@ export default function Home() {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
-						<Button className="my-8 sm:w-full">More</Button>
+						<Button className="my-8 sm:w-full py-3 px-10 w-[30%]">More</Button>
 					</section>
 				</main>
 			</Layout>

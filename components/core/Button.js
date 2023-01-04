@@ -13,7 +13,7 @@ const Button = forwardRef(function InnerButton(
 		<>
 			<button
 				ref={ref}
-				className={`px-6 py-2 font-medium font-display text-white bg-indigo-600 hover:bg-indigo-700 focus:bg-indigo-800 active:bg-indigo-900 rounded transition-colors ${className}`}
+				className={`font-bold text-lg font-display text-white bg-indigo-600 hover:bg-indigo-700 focus:bg-indigo-800 active:bg-indigo-900 rounded transition-colors ${className}`}
 				{...props}
 			>
 				{children}

@@ -8,7 +8,7 @@ import Layout from "~/layout/Layout";
 const About = () => {
 	return (
 		<Layout>
-			<div className="px-24 md:px-12 sm:px-5 py-20 sm:py-10">
+			<div className="px-24 md:px-12 sm:px-5 py-20 md:py-10">
 				<header className="w-full flex flex-col items-center justify-center mb-10">
 					<h1 className="lg:hidden text-5xl font-bold mb-4">
 						Meet the nerd behind this

@@ -11,7 +11,7 @@ import Layout from "~/layout/Layout";
 const Categories = () => {
 	return (
 		<Layout>
-			<section className="px-24 md:px-12 sm:px-4 py-20">
+			<section className="px-24 md:px-12 sm:px-4 py-20 md:py-10">
 				<header className="w-full flex flex-col items-center justify-center mb-10">
 					<h1 className="text-5xl sm:text-[28px] font-bold mb-4">Categories</h1>
 					<p className="text-xl sm:text-base font-medium text-center">
@@ -28,7 +28,10 @@ const Categories = () => {
 				</div>
 			</section>
 			<Autoscroll />
-			<section id="aries-celebrities" className="sm:px-5 md:px-12 px-24 my-20">
+			<section
+				id="aries-celebrities"
+				className="sm:px-5 md:px-12 px-24 py-20 lg:py-10"
+			>
 				<div className="flex justify-center space-x-3 leading-tight my-4">
 					<Image src="/aries.svg" alt="Aries symbol" width={35} height={35} />
 					<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-semibold font-display">
@@ -45,7 +48,7 @@ const Categories = () => {
 						return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 					})}
 				</div>
-				<Button className="mt-8 sm:w-full">More</Button>
+				<Button className="mt-8 sm:w-full py-3 px-10 w-[30%]">More</Button>
 			</section>
 		</Layout>
 	);
