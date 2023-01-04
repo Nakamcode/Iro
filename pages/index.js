@@ -197,6 +197,16 @@ export default function Home() {
 							#f64f59 100%
 						);
 					}
+					@media screen and (max-width: 900px) {
+						.background-gradient {
+							background: linear-gradient(
+								162.92deg,
+								#0c99c1 0%,
+								#b12dd6 52.6%,
+								#ef273d 100%
+							);
+						}
+					}
 				`}
 			</style>
 		</>

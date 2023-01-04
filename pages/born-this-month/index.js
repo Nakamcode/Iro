@@ -26,7 +26,7 @@ const BornThisMonth = () => {
 				<div className="py-20 grid grid-cols-2 items-center gap-10 lg:grid-cols-1 sm:py-6">
 					<div className="w-[80%] sm:w-full lg:mb-10">
 						<h2 className="text-5xl sm:text-[28px] font-semibold mb-8">
-							Characteristics
+							Their Traits
 						</h2>
 						<ul className="space-y-6">
 							<li className="flex items-center">

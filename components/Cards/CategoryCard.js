@@ -4,7 +4,7 @@ import React from "react";
 const CategoryCard = ({ data }) => {
 	return (
 		<div
-			className={`w-full h-36 sm:h-24 rounded-md shadow-lg bg-white flex flex-col items-center justify-center border border-[#AFAFAF] ${
+			className={`w-full h-36 sm:h-24 rounded-md hover:shadow-[0px_0px_19px_rgba(232,73,235,0.34)] cursor-pointer shadow-lg bg-white flex flex-col items-center justify-center border border-[#AFAFAF] ${
 				data.id === 1 && "shadow-[0px_0px_19px_rgba(232,73,235,0.34)]"
 			}`}
 		>

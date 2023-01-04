@@ -23,11 +23,11 @@ const Footer = () => {
 						</div>
 						<div>
 							<p className="cursor-pointer">Powered by</p>
-							<p className="cursor-pointer font-semibold flex space-x-1.5">
+							<div className="cursor-pointer font-semibold flex space-x-1.5">
 								<p className="underline">Vercel </p>
 								<p>&</p>
 								<p className="underline"> Xata</p>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
