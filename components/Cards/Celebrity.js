@@ -1,16 +1,14 @@
 import { signs } from "#/signs";
 import { capitalize } from "#/utils";
 import Image from "next/image";
-
+import { useMemo } from "react";
+import { months } from "#/dummy";
 const Celebrity = ({ celebrity }) => {
 	const sign = capitalize(celebrity.sign);
-
-	const attributes = {
-		"Birth Date": new Date(celebrity.birth_date).toLocaleDateString(),
-		"Birth Place": celebrity.birth_place,
-		Status: `${capitalize(celebrity.status)} (${celebrity.age}yrs)`,
-		"Zodiac Sign": `${sign} ${signs.find(({ label }) => label === sign).icon}`,
-	};
+	const date = new Date(celebrity.birth_date);
+	const month_index = date.getMonth();
+	const month = months.filter((month, index) => index === month_index);
+	const birth_date = `${date.getDay()} ${month} ${date.getFullYear()}`;
 	return (
 		<div
 			key={celebrity.id}
@@ -29,12 +27,33 @@ const Celebrity = ({ celebrity }) => {
 					{celebrity.name}
 				</h3>
 				<div className="props sm:text-sm">
-					{Object.entries(attributes).map(([key, value]) => (
-						<p key={key}>
-							<strong>{key}: </strong>
-							<span>{value}</span>
-						</p>
-					))}
+					<p>
+						<strong>Birth Date: </strong>
+						<span>{birth_date}</span>
+					</p>
+					<p>
+						<strong>Birth Place: </strong>
+						<span>{celebrity.birth_place}</span>
+					</p>
+					<p>
+						<strong>Status: </strong>
+						<span
+							className={`mr-2 capitalize font-semibold ${
+								celebrity.status.toLowerCase() === "alive"
+									? "text-green-600"
+									: "text-red-500"
+							}`}
+						>
+							{celebrity.status}
+						</span>
+						<span>{celebrity.age}yrs</span>
+					</p>
+					<p>
+						<strong>Zodiac Sign: </strong>
+						<span>
+							{sign} {signs.find(({ label }) => label === sign).icon}
+						</span>
+					</p>
 				</div>
 				<p className="font-medium sm:text-sm">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
