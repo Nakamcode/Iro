@@ -1,14 +1,15 @@
 import { signs } from "#/signs";
 import { capitalize } from "#/utils";
 import Image from "next/image";
-import { useMemo } from "react";
 import { months } from "#/dummy";
 const Celebrity = ({ celebrity }) => {
 	const sign = capitalize(celebrity.sign);
 	const date = new Date(celebrity.birth_date);
 	const month_index = date.getMonth();
 	const month = months.filter((month, index) => index === month_index);
-	const birth_date = `${date.getDay()} ${month} ${date.getFullYear()}`;
+	const birth_date = `${
+		date.getDay() === 0 ? 1 : date.getDay()
+	} ${month} ${date.getFullYear()}`;
 	return (
 		<div
 			key={celebrity.id}
@@ -16,7 +17,7 @@ const Celebrity = ({ celebrity }) => {
 		>
 			<div className="w-full h-52 relative">
 				<Image
-					src={celebrity.imgURL}
+					src="/tylerperry.svg"
 					alt={celebrity.name}
 					className="rounded-t-xl sm:object-cover"
 					fill

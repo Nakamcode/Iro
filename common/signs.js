@@ -5,7 +5,7 @@ export const signs = [
 		image: `/pisces.svg`,
 	},
 	{
-		label: "Arial",
+		label: "Aries",
 		icon: "♈",
 		image: `/arial.svg`,
 	},

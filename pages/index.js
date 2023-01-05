@@ -2,18 +2,19 @@ import Head from "next/head";
 import Image from "next/image";
 import { dummyCelebrities } from "#/dummy";
 import { signs } from "#/signs";
-import { capitalize } from "#/utils";
-import Header from "~/layout/Header";
 import Celebrity from "~/Cards/Celebrity";
 import Button from "~/core/Button";
 import CategoryCard from "~/Cards/CategoryCard";
 import { heroCategories } from "#/dummy";
-import Footer from "~/layout/Footer";
 import Layout from "~/layout/Layout";
 import Autoscroll from "~/core/Autoscroll";
-import { XataClient } from "../utils/xata";
+import { XataClient } from "$$/xata";
 
-export default function Home({ aquariusData }) {
+export default function Home({ ariesData, scorpioData }) {
+	console.log({
+		aries: ariesData,
+		scorpioData: scorpioData,
+	});
 	return (
 		<>
 			<Head>
@@ -69,7 +70,7 @@ export default function Home({ aquariusData }) {
 							determination.
 						</p>
 						<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-							{dummyCelebrities.map((celebrity) => {
+							{ariesData.map((celebrity) => {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
@@ -100,7 +101,7 @@ export default function Home({ aquariusData }) {
 							and successful people overall.
 						</p>
 						<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-							{dummyCelebrities.map((celebrity) => {
+							{scorpioData.map((celebrity) => {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
@@ -217,9 +218,15 @@ export default function Home({ aquariusData }) {
 const xata = new XataClient();
 
 export const getServerSideProps = async () => {
-	const aquariusData = await xata.db.Aquarius.getMany();
+	const [ariesData, scorpioData] = await Promise.all([
+		xata.db.Aries.getMany(),
+		xata.db.Scorpio.getMany(),
+	]);
 
 	return {
-		props: { aquariusData: JSON.parse(JSON.stringify(aquariusData)) },
+		props: {
+			ariesData: JSON.parse(JSON.stringify(ariesData)),
+			scorpioData: JSON.parse(JSON.stringify(scorpioData)),
+		},
 	};
 };
