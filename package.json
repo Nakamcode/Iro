@@ -13,6 +13,7 @@
     "@fontsource/lato": "^4.5.10",
     "@heroicons/react": "^2.0.13",
     "@next/font": "13.1.1",
+    "@xata.io/client": "^0.21.6",
     "date-fns": "^2.29.3",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",

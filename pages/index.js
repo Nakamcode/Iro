@@ -11,8 +11,9 @@ import { heroCategories } from "#/dummy";
 import Footer from "~/layout/Footer";
 import Layout from "~/layout/Layout";
 import Autoscroll from "~/core/Autoscroll";
+import { XataClient } from "../utils/xata";
 
-export default function Home() {
+export default function Home({ aquariusData }) {
 	return (
 		<>
 			<Head>
@@ -212,3 +213,13 @@ export default function Home() {
 		</>
 	);
 }
+
+const xata = new XataClient();
+
+export const getServerSideProps = async () => {
+	const aquariusData = await xata.db.Aquarius.getMany();
+
+	return {
+		props: { aquariusData: JSON.parse(JSON.stringify(aquariusData)) },
+	};
+};
