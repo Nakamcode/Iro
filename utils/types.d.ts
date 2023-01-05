@@ -112,6 +112,10 @@ declare const tables: readonly [
 			{
 				readonly name: "description";
 				readonly type: "text";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
 			}
 		];
 	},

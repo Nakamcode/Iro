@@ -17,7 +17,7 @@ const Celebrity = ({ celebrity }) => {
 		>
 			<div className="w-full h-52 relative">
 				<Image
-					src="/tylerperry.svg"
+					src={celebrity.imageURL}
 					alt={celebrity.name}
 					className="rounded-t-xl sm:object-cover"
 					fill

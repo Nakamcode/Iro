@@ -40,6 +40,7 @@ const tables = [
 			{ name: "sign", type: "string" },
 			{ name: "gender", type: "string" },
 			{ name: "description", type: "text" },
+			{ name: "imageURL", type: "string" },
 		],
 	},
 	{

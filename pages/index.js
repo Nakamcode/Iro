@@ -11,10 +11,6 @@ import Autoscroll from "~/core/Autoscroll";
 import { XataClient } from "$$/xata";
 
 export default function Home({ ariesData, scorpioData }) {
-	console.log({
-		aries: ariesData,
-		scorpioData: scorpioData,
-	});
 	return (
 		<>
 			<Head>
