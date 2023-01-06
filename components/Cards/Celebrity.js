@@ -1,5 +1,5 @@
 import { signs } from "#/signs";
-import { capitalize } from "#/utils";
+import { capitalize, truncate } from "#/utils";
 import Image from "next/image";
 import { months } from "#/dummy";
 const Celebrity = ({ celebrity }) => {
@@ -10,6 +10,11 @@ const Celebrity = ({ celebrity }) => {
 	const birth_date = `${
 		date.getDay() === 0 ? 1 : date.getDay()
 	} ${month} ${date.getFullYear()}`;
+
+	const truncatedDesc = truncate(
+		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veritatis rem amet obcaecati explicabo dolorum mollitia molestiae nisi tempore",
+		50
+	);
 	return (
 		<div
 			key={celebrity.id}
@@ -34,7 +39,7 @@ const Celebrity = ({ celebrity }) => {
 					</p>
 					<p>
 						<strong>Birth Place: </strong>
-						<span>{celebrity.birth_place}</span>
+						<span>{truncate(celebrity.birth_place, 26)}</span>
 					</p>
 					<p>
 						<strong>Status: </strong>
@@ -57,9 +62,7 @@ const Celebrity = ({ celebrity }) => {
 					</p>
 				</div>
 				<p className="font-medium sm:text-sm">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-					veritatis rem amet obcaecati explicabo dolorum mollitia molestiae nisi
-					tempore ea...
+					{truncatedDesc}
 					<a
 						href="http://wikipedia.com"
 						target="_blank"
