@@ -6,15 +6,16 @@ import Celebrity from "~/Cards/Celebrity";
 import Autoscroll from "~/core/Autoscroll";
 import Layout from "~/layout/Layout";
 
-const Category = () => {
+const Category = ({ id }) => {
+	console.log("id", id);
 	return (
 		<Layout>
 			<section className="px-24 sm:px-5 md:px-12 py-20 lg:py-10">
 				<header className="w-full flex flex-col items-center justify-center mb-10">
 					<div className="flex justify-center space-x-3 leading-tight my-4">
 						<Image src="/virgo.svg" alt="Aries symbol" width={35} height={35} />
-						<h2 className="md:text-2xl text-4xl text-center font-semibold font-display">
-							Virgo Celebrities
+						<h2 className="md:text-2xl text-4xl text-center font-bold">
+							{id} Celebrities
 						</h2>
 					</div>
 					<p className="text-xl font-medium w-3/4 lg:w-full text-center sm:text-base">
@@ -25,8 +26,8 @@ const Category = () => {
 				</header>
 				<div className="py-20 sm:py-6 grid grid-cols-2 items-center gap-10 lg:grid-cols-1">
 					<div className="w-[80%] sm:w-full lg:mb-10">
-						<h2 className="text-5xl sm:text-[28px] font-semibold mb-8">
-							Characteristics
+						<h2 className="text-4xl sm:text-[28px] font-semibold mb-8">
+							Their Traits
 						</h2>
 						<ul className="space-y-6">
 							<li className="flex items-center">
@@ -128,4 +129,12 @@ const Category = () => {
 	);
 };
 
+export const getServerSideProps = ({ query }) => {
+	const { id } = query;
+	console.log("query", query);
+	console.log(id);
+	return {
+		props: { id },
+	};
+};
 export default Category;

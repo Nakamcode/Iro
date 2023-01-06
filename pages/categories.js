@@ -21,7 +21,7 @@ const Categories = () => {
 				</header>
 				<div className="grid grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 gap-6">
 					{categories.map((data) => (
-						<Link href={`/categories/${data.name}`} key={data.id}>
+						<Link href={`/categor/${data.name}`} key={data.id}>
 							<CategoryCard data={data} key={data.id} />
 						</Link>
 					))}
@@ -34,7 +34,7 @@ const Categories = () => {
 			>
 				<div className="flex justify-center space-x-3 leading-tight my-4">
 					<Image src="/aries.svg" alt="Aries symbol" width={35} height={35} />
-					<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-semibold font-display">
+					<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-semibold">
 						Born Today
 					</h2>
 				</div>

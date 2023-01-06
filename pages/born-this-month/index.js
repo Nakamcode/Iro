@@ -1,5 +1,6 @@
 import { characteristics, dummyCelebrities, heroCategories } from "#/dummy";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import CategoryCard from "~/Cards/CategoryCard";
 import Celebrity from "~/Cards/Celebrity";
@@ -112,7 +113,9 @@ const BornThisMonth = () => {
 				</div>
 				<div className="w-full grid grid-cols-3 gap-10">
 					{heroCategories.map((categoryData) => (
-						<CategoryCard data={categoryData} key={categoryData.id} />
+						<Link href={`/category/${categoryData.name}`} key={categoryData.id}>
+							<CategoryCard data={categoryData} key={categoryData.id} />
+						</Link>
 					))}
 				</div>
 			</section>

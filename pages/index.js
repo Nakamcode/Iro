@@ -9,6 +9,7 @@ import { heroCategories } from "#/dummy";
 import Layout from "~/layout/Layout";
 import Autoscroll from "~/core/Autoscroll";
 import { XataClient } from "$$/xata";
+import Link from "next/link";
 
 export default function Home({ ariesData, scorpioData }) {
 	return (
@@ -40,7 +41,12 @@ export default function Home({ ariesData, scorpioData }) {
 						</div>
 						<div className="w-full grid grid-cols-3 gap-6 sm:gap-4">
 							{heroCategories.map((categoryData) => (
-								<CategoryCard data={categoryData} key={categoryData.id} />
+								<Link
+									href={`/category/${categoryData.name}`}
+									key={categoryData.id}
+								>
+									<CategoryCard data={categoryData} key={categoryData.id} />
+								</Link>
 							))}
 						</div>
 					</section>
@@ -123,7 +129,12 @@ export default function Home({ ariesData, scorpioData }) {
 							</div>
 							<div className="w-full grid grid-cols-3 gap-10 sm:gap-4">
 								{heroCategories.map((categoryData) => (
-									<CategoryCard data={categoryData} key={categoryData.id} />
+									<Link
+										href={`/category/${categoryData.name}`}
+										key={categoryData.id}
+									>
+										<CategoryCard data={categoryData} key={categoryData.id} />
+									</Link>
 								))}
 							</div>
 						</section>

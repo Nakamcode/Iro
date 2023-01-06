@@ -17,7 +17,7 @@ const Header = () => {
 	const closeSidebar = () => setIsSidebarOpen(false);
 
 	return (
-		<header className="fixed w-full top-0 bg-indigo-700 px-24 md:px-12 sm:px-5 py-5 flex items-center justify-between z-30 shadow-sm shadow-indigo-900">
+		<header className="fixed w-full top-0 bg-indigo-700 px-24 md:px-12 sm:px-5 py-5 lg:py-2 flex items-center justify-between z-30 shadow-sm shadow-indigo-900">
 			<div className="flex space-x-2 items-center">
 				<Link href="/">
 					<div className="flex items-center space-x-2">
