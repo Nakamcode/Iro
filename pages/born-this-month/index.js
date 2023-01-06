@@ -14,7 +14,7 @@ const BornThisMonth = () => {
 				<header className="w-full flex flex-col items-center justify-center mb-10">
 					<div className="flex justify-center space-x-3 leading-tight my-4">
 						<Image src="/aries.svg" alt="Aries symbol" width={35} height={35} />
-						<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-semibold font-display">
+						<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-bold">
 							Born This Month
 						</h2>
 					</div>
@@ -26,7 +26,7 @@ const BornThisMonth = () => {
 				</header>
 				<div className="py-20 grid grid-cols-2 items-center gap-10 lg:grid-cols-1 sm:py-6">
 					<div className="w-[80%] sm:w-full lg:mb-10">
-						<h2 className="text-5xl sm:text-[28px] font-semibold mb-8">
+						<h2 className="text-4xl sm:text-[28px] font-semibold mb-8">
 							Their Traits
 						</h2>
 						<ul className="space-y-6">
