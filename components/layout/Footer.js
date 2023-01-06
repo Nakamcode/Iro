@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { PopupButton } from "@typeform/embed-react";
 
 const Footer = () => {
 	return (
@@ -14,17 +15,23 @@ const Footer = () => {
 						<Link href="https://vercel.com/" target="_blank">
 							<li className="underline cursor-pointer">Powered by Vercel</li>
 						</Link>
-						<li className="underline cursor-pointer">Give a feedback</li>
+						<PopupButton id="rXv5FPQf" className="my-button">
+							<li className="underline cursor-pointer">Give a feedback</li>
+						</PopupButton>
 					</ul>
 					<p>JAMstack</p>
 				</div>
 				<div className="w-full hidden md:flex mb-2 text-lg md:mb-10">
 					<div className="w-full md:flex justify-between items-center sm:text-[15px]">
 						<div>
-							<p className="underline cursor-pointer">Code on Github</p>
-							<p className="underline cursor-pointer items-end">
-								Give a feedback
-							</p>
+							<Link href="https://github.com/Kwesi-dev/Iro" target="_blank">
+								<p className="underline cursor-pointer">Code on Github</p>
+							</Link>
+							<PopupButton id="rXv5FPQf" className="my-button">
+								<p className="underline cursor-pointer items-end">
+									Give a feedback
+								</p>
+							</PopupButton>
 						</div>
 						<div>
 							<p className="cursor-pointer">Powered by</p>
