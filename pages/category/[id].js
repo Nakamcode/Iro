@@ -13,7 +13,12 @@ const Category = ({ id }) => {
 			<section className="px-24 sm:px-5 md:px-12 py-20 lg:py-10">
 				<header className="w-full flex flex-col items-center justify-center mb-10">
 					<div className="flex justify-center space-x-3 leading-tight my-4">
-						<Image src="/virgo.svg" alt="Aries symbol" width={35} height={35} />
+						<Image
+							src={`/${id.toLowerCase()}.svg`}
+							alt="Aries symbol"
+							width={35}
+							height={35}
+						/>
 						<h2 className="md:text-2xl text-4xl text-center font-bold">
 							{id} Celebrities
 						</h2>
@@ -131,8 +136,6 @@ const Category = ({ id }) => {
 
 export const getServerSideProps = ({ query }) => {
 	const { id } = query;
-	console.log("query", query);
-	console.log(id);
 	return {
 		props: { id },
 	};

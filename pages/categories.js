@@ -21,7 +21,7 @@ const Categories = () => {
 				</header>
 				<div className="grid grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 gap-6">
 					{categories.map((data) => (
-						<Link href={`/categor/${data.name}`} key={data.id}>
+						<Link href={`/category/${data.name}`} key={data.id}>
 							<CategoryCard data={data} key={data.id} />
 						</Link>
 					))}
