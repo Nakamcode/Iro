@@ -1,5 +1,6 @@
 import { characteristics, dummyCelebrities, heroCategories } from "#/dummy";
 import { XataClient } from "$$/xata";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import CategoryCard from "~/Cards/CategoryCard";
@@ -9,94 +10,101 @@ import Layout from "~/layout/Layout";
 
 const Category = ({ categoryName, data }) => {
 	return (
-		<Layout>
-			<section className="px-24 sm:px-5 md:px-12 py-20 lg:py-10">
-				<header className="w-full flex flex-col items-center justify-center mb-10">
-					<div className="flex justify-center space-x-3 leading-tight my-4">
-						<Image
-							src={`/${categoryName.toLowerCase()}.svg`}
-							alt="Aries symbol"
-							width={35}
-							height={35}
-						/>
-						<h2 className="md:text-2xl text-4xl text-center font-bold">
-							{categoryName} Celebrities
-						</h2>
+		<>
+			<Head>
+				<title>Iro - {categoryName}</title>
+			</Head>
+			<Layout>
+				<section className="px-24 sm:px-5 md:px-12 py-20 lg:py-10">
+					<header className="w-full flex flex-col items-center justify-center mb-10">
+						<div className="flex justify-center space-x-3 leading-tight my-4">
+							<Image
+								src={`/${categoryName.toLowerCase()}.svg`}
+								alt="Aries symbol"
+								width={35}
+								height={35}
+							/>
+							<h2 className="md:text-2xl text-4xl text-center font-bold">
+								{categoryName} Celebrities
+							</h2>
+						</div>
+						<p className="text-xl font-medium w-3/4 lg:w-full text-center sm:text-base">
+							Virgos want to help. They are kind, gentle, and supportive friends
+							and lovers who use their incredible intellect and resourcefulness
+							to problem-solve.
+						</p>
+					</header>
+					<div className="py-20 sm:py-6 grid grid-cols-2 items-center gap-10 lg:grid-cols-1">
+						<div className="w-[80%] sm:w-full lg:mb-10">
+							<h2 className="text-4xl sm:text-[28px] font-semibold mb-8">
+								Their Traits
+							</h2>
+							<ul className="space-y-6">
+								<li className="flex items-center">
+									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
+										<Image
+											src="/leo_w.svg"
+											alt="leo logo"
+											height={20}
+											width={20}
+										/>
+									</div>
+									<span className="font-medium text-xl sm:text-base">
+										Their imaginations are always flowing, and they express
+										themselves via art.
+									</span>
+								</li>
+								<li className="flex items-center">
+									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
+										<Image
+											src="/leo_w.svg"
+											alt="leo logo"
+											height={20}
+											width={20}
+										/>
+									</div>
+									<span className="font-medium text-xl sm:text-base">
+										Virgos are diligent workers who excel at what they do.
+									</span>
+								</li>
+								<li className="flex items-center">
+									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
+										<Image
+											src="/leo_w.svg"
+											alt="leo logo"
+											height={20}
+											width={20}
+										/>
+									</div>
+									<span className="font-medium text-xl sm:text-base">
+										Virgos thrive on academic and intimate connections.
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div className="grid grid-cols-3 gap-6">
+							{characteristics.map((data) => (
+								<CategoryCard data={data} key={data.id} />
+							))}
+						</div>
 					</div>
-					<p className="text-xl font-medium w-3/4 lg:w-full text-center sm:text-base">
-						Virgos want to help. They are kind, gentle, and supportive friends
-						and lovers who use their incredible intellect and resourcefulness to
-						problem-solve.
-					</p>
-				</header>
-				<div className="py-20 sm:py-6 grid grid-cols-2 items-center gap-10 lg:grid-cols-1">
-					<div className="w-[80%] sm:w-full lg:mb-10">
-						<h2 className="text-4xl sm:text-[28px] font-semibold mb-8">
-							Their Traits
-						</h2>
-						<ul className="space-y-6">
-							<li className="flex items-center">
-								<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-									<Image
-										src="/leo_w.svg"
-										alt="leo logo"
-										height={20}
-										width={20}
-									/>
-								</div>
-								<span className="font-medium text-xl sm:text-base">
-									Their imaginations are always flowing, and they express
-									themselves via art.
-								</span>
-							</li>
-							<li className="flex items-center">
-								<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-									<Image
-										src="/leo_w.svg"
-										alt="leo logo"
-										height={20}
-										width={20}
-									/>
-								</div>
-								<span className="font-medium text-xl sm:text-base">
-									Virgos are diligent workers who excel at what they do.
-								</span>
-							</li>
-							<li className="flex items-center">
-								<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-									<Image
-										src="/leo_w.svg"
-										alt="leo logo"
-										height={20}
-										width={20}
-									/>
-								</div>
-								<span className="font-medium text-xl sm:text-base">
-									Virgos thrive on academic and intimate connections.
-								</span>
-							</li>
-						</ul>
+				</section>
+				<Autoscroll />
+				<section
+					id="aries-celebrities"
+					className="sm:px-5 md:px-12 px-24 my-20"
+				>
+					<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
+						{data.map((celebrity) => {
+							return <Celebrity celebrity={celebrity} key={celebrity.id} />;
+						})}
 					</div>
-					<div className="grid grid-cols-3 gap-6">
-						{characteristics.map((data) => (
-							<CategoryCard data={data} key={data.id} />
-						))}
-					</div>
-				</div>
-			</section>
-			<Autoscroll />
-			<section id="aries-celebrities" className="sm:px-5 md:px-12 px-24 my-20">
-				<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-					{data.map((celebrity) => {
-						return <Celebrity celebrity={celebrity} key={celebrity.id} />;
-					})}
-				</div>
-			</section>
-			{/* <Autoscroll />
+				</section>
+				{/* <Autoscroll />
 			<section className="px-24 sm:px-5 md:px-12 py-20">
 				<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-					{dummyCelebrities.map((celebrity) => {
-						return <Celebrity celebrity={celebrity} key={celebrity.id} />;
+				{dummyCelebrities.map((celebrity) => {
+					return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 					})}
 				</div>
 			</section>
@@ -118,7 +126,7 @@ const Category = ({ categoryName, data }) => {
 					</p>
 				</div>
 				<div className="w-full grid grid-cols-3 gap-10">
-					{heroCategories.map((categoryData) => (
+				{heroCategories.map((categoryData) => (
 						<CategoryCard data={categoryData} key={categoryData.id} />
 					))}
 				</div>
@@ -130,7 +138,8 @@ const Category = ({ categoryName, data }) => {
 					})}
 				</div>
 			</section> */}
-		</Layout>
+			</Layout>
+		</>
 	);
 };
 
