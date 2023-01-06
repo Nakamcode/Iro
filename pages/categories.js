@@ -1,6 +1,7 @@
 import { categories, dummyCelebrities } from "#/dummy";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import CategoryCard from "~/Cards/CategoryCard";
 import Celebrity from "~/Cards/Celebrity";
@@ -9,6 +10,7 @@ import Button from "~/core/Button";
 import Layout from "~/layout/Layout";
 
 const Categories = () => {
+	const router = useRouter();
 	return (
 		<Layout>
 			<section className="px-24 md:px-12 sm:px-4 py-20 md:py-10">
@@ -48,7 +50,12 @@ const Categories = () => {
 						return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 					})}
 				</div>
-				<Button className="mt-8 sm:w-full py-3 px-10 w-[30%]">More</Button>
+				<Button
+					className="mt-8 sm:w-full py-3 px-10 w-[30%]"
+					onClick={() => router.push("/category/Aries")}
+				>
+					More
+				</Button>
 			</section>
 		</Layout>
 	);

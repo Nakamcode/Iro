@@ -1,4 +1,5 @@
 import { characteristics, dummyCelebrities, heroCategories } from "#/dummy";
+import { XataClient } from "$$/xata";
 import Image from "next/image";
 import React from "react";
 import CategoryCard from "~/Cards/CategoryCard";
@@ -6,21 +7,20 @@ import Celebrity from "~/Cards/Celebrity";
 import Autoscroll from "~/core/Autoscroll";
 import Layout from "~/layout/Layout";
 
-const Category = ({ id }) => {
-	console.log("id", id);
+const Category = ({ categoryName, data }) => {
 	return (
 		<Layout>
 			<section className="px-24 sm:px-5 md:px-12 py-20 lg:py-10">
 				<header className="w-full flex flex-col items-center justify-center mb-10">
 					<div className="flex justify-center space-x-3 leading-tight my-4">
 						<Image
-							src={`/${id.toLowerCase()}.svg`}
+							src={`/${categoryName.toLowerCase()}.svg`}
 							alt="Aries symbol"
 							width={35}
 							height={35}
 						/>
 						<h2 className="md:text-2xl text-4xl text-center font-bold">
-							{id} Celebrities
+							{categoryName} Celebrities
 						</h2>
 					</div>
 					<p className="text-xl font-medium w-3/4 lg:w-full text-center sm:text-base">
@@ -87,12 +87,12 @@ const Category = ({ id }) => {
 			<Autoscroll />
 			<section id="aries-celebrities" className="sm:px-5 md:px-12 px-24 my-20">
 				<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-					{dummyCelebrities.map((celebrity) => {
+					{data.map((celebrity) => {
 						return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 					})}
 				</div>
 			</section>
-			<Autoscroll />
+			{/* <Autoscroll />
 			<section className="px-24 sm:px-5 md:px-12 py-20">
 				<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
 					{dummyCelebrities.map((celebrity) => {
@@ -129,15 +129,36 @@ const Category = ({ id }) => {
 						return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 					})}
 				</div>
-			</section>
+			</section> */}
 		</Layout>
 	);
 };
 
-export const getServerSideProps = ({ query }) => {
+const xata = new XataClient();
+
+export const getServerSideProps = async ({ query }) => {
 	const { id } = query;
+	let res = [];
+	if (id === "Aquarius") {
+		res = await xata.db.Aquarius.getMany();
+	} else if (id === "Scorpio") {
+		res = await xata.db.Scorpio.getMany();
+	} else if (id === "Leo") {
+		res = await xata.db.Leo.getMany();
+	} else if (id === "Cancer") {
+		res = await xata.db.Cancer.getMany();
+	} else if (id === "Sagittarius") {
+		res = await xata.db.Sagittarius.getMany();
+	} else if (id === "Aries") {
+		res = await xata.db.Aries.getMany();
+	} else if (id === "Capricorn") {
+		res = await xata.db.Capricorn.getMany();
+	} else {
+		return;
+	}
+
 	return {
-		props: { id },
+		props: { categoryName: id, data: JSON.parse(JSON.stringify(res)) },
 	};
 };
 export default Category;

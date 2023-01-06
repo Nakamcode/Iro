@@ -10,8 +10,9 @@ import Layout from "~/layout/Layout";
 import Autoscroll from "~/core/Autoscroll";
 import { XataClient } from "$$/xata";
 import Link from "next/link";
-
+import { useRouter } from "next/router";
 export default function Home({ ariesData, scorpioData }) {
+	const router = useRouter();
 	return (
 		<>
 			<Head>
@@ -76,7 +77,10 @@ export default function Home({ ariesData, scorpioData }) {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
-						<Button className="mt-8 sm:w-full font-bold py-3 px-10 w-[30%]">
+						<Button
+							className="mt-8 sm:w-full font-bold py-3 px-10 w-[30%]"
+							onClick={() => router.push("/category/Aries")}
+						>
 							More
 						</Button>
 					</section>
@@ -107,7 +111,10 @@ export default function Home({ ariesData, scorpioData }) {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
-						<Button className="my-8 sm:w-full font-bold py-3 px-10 w-[30%]">
+						<Button
+							className="my-8 sm:w-full font-bold py-3 px-10 w-[30%]"
+							onClick={() => router.push("/category/Scorpio")}
+						>
 							More
 						</Button>
 						<section
@@ -166,7 +173,12 @@ export default function Home({ ariesData, scorpioData }) {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
-						<Button className="my-8 sm:w-full py-3 px-10 w-[30%]">More</Button>
+						<Button
+							className="my-8 sm:w-full py-3 px-10 w-[30%]"
+							onClick={() => router.push("/category/Libra")}
+						>
+							More
+						</Button>
 					</section>
 				</main>
 			</Layout>
