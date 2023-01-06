@@ -20,7 +20,8 @@
     "focus-trap-react": "^10.0.2",
     "next": "13.1.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-fast-marquee": "^1.3.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

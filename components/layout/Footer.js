@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -7,8 +8,12 @@ const Footer = () => {
 				<div className="md:hidden w-full flex justify-between items-center mb-2 font-medium text-lg">
 					<p>&copy; Iro 2022</p>
 					<ul className="flex items-center space-x-8">
-						<li className="underline cursor-pointer">Code on Github</li>
-						<li className="underline cursor-pointer">Powered by Vercel</li>
+						<Link href="https://github.com/Kwesi-dev/Iro" target="_blank">
+							<li className="underline cursor-pointer">Code on Github</li>
+						</Link>
+						<Link href="https://vercel.com/" target="_blank">
+							<li className="underline cursor-pointer">Powered by Vercel</li>
+						</Link>
 						<li className="underline cursor-pointer">Give a feedback</li>
 					</ul>
 					<p>JAMstack</p>
@@ -24,9 +29,16 @@ const Footer = () => {
 						<div>
 							<p className="cursor-pointer">Powered by</p>
 							<div className="cursor-pointer font-semibold flex space-x-1.5">
-								<p className="underline">Vercel </p>
+								<Link href="https://vercel.com/" target="_blank">
+									<p className="underline">Vercel </p>
+								</Link>
 								<p>&</p>
-								<p className="underline"> Xata</p>
+								<Link
+									href="https://xata.io/docs/intro/getting-started"
+									target="_blank"
+								>
+									<p className="underline"> Xata</p>
+								</Link>
 							</div>
 						</div>
 					</div>
