@@ -1,4 +1,10 @@
-import { characteristics, dummyCelebrities, heroCategories } from "#/dummy";
+import {
+	categoryData,
+	characteristics,
+	dummyCelebrities,
+	heroCategories,
+} from "#/dummy";
+import { XataClient } from "$$/xata";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,19 +14,20 @@ import Celebrity from "~/Cards/Celebrity";
 import Autoscroll from "~/core/Autoscroll";
 import Layout from "~/layout/Layout";
 
-const BornThisMonth = () => {
+const BornThisMonth = ({ data }) => {
+	const category = categoryData.find((data) => data.id === "Capricorn");
 	return (
 		<>
 			<Head>
 				<title>Iro - born-this-month</title>
 			</Head>
 			<Layout>
-				<section className="px-24 md:px-12 sm:px-5 py-20 lg:py-10">
+				<section className="px-24 md:px-12 sm:px-5 pb-20 pt-10 lg:pb-10 lg:pt-10">
 					<header className="w-full flex flex-col items-center justify-center mb-10">
 						<div className="flex justify-center space-x-3 leading-tight my-4">
 							<Image
-								src="/aries.svg"
-								alt="Aries symbol"
+								src={`/${category.id.toLocaleLowerCase()}.svg`}
+								alt={`${category.id} symbol`}
 								width={35}
 								height={35}
 							/>
@@ -29,60 +36,34 @@ const BornThisMonth = () => {
 							</h2>
 						</div>
 						<p className="text-xl font-medium w-3/4 lg:w-full text-center sm:text-base">
-							Iro&apos;s born this month are passionate, motivated, and
-							confident people who builds community with their cheerful
-							disposition and relentless determination.
+							{category.subheading}
 						</p>
 					</header>
 					<div className="py-20 grid grid-cols-2 items-center gap-10 lg:grid-cols-1 sm:py-6">
-						<div className="w-[80%] sm:w-full lg:mb-10">
-							<h2 className="text-4xl sm:text-[28px] font-semibold mb-8">
+						<div className="w-[95%] sm:w-full lg:mb-10 lg:w-full">
+							<h2 className="text-4xl sm:text-[28px] md:text-2xl font-bold mb-8 lg:text-center">
 								Their Traits
 							</h2>
 							<ul className="space-y-6">
-								<li className="flex items-center">
-									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-										<Image
-											src="/leo_w.svg"
-											alt="leo logo"
-											height={20}
-											width={20}
-										/>
-									</div>
-									<span className="font-medium text-xl sm:text-base">
-										Aries are attracted to people who can keep up with them.
-									</span>
-								</li>
-								<li className="flex items-center">
-									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-										<Image
-											src="/leo_w.svg"
-											alt="leo logo"
-											height={20}
-											width={20}
-										/>
-									</div>
-									<span className="font-medium text-xl sm:text-base">
-										Creative Skills of Aries natives are heart winning.
-									</span>
-								</li>
-								<li className="flex items-center">
-									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-										<Image
-											src="/leo_w.svg"
-											alt="leo logo"
-											height={20}
-											width={20}
-										/>
-									</div>
-									<span className="font-medium text-xl sm:text-base">
-										They are very Optimistic about everything.
-									</span>
-								</li>
+								{category.traits.map((trait) => (
+									<li className="flex items-center" key={trait}>
+										<div className="bg-[#E849EB] p-2 rounded-full mr-3">
+											<Image
+												src={`/${category.id.toLowerCase()}_w.svg`}
+												alt="leo logo"
+												height={20}
+												width={20}
+											/>
+										</div>
+										<span className="font-medium text-xl sm:text-base">
+											{trait}
+										</span>
+									</li>
+								))}
 							</ul>
 						</div>
 						<div className="grid grid-cols-3 gap-6">
-							{characteristics.map((data) => (
+							{category.words.map((data) => (
 								<CategoryCard data={data} key={data.id} />
 							))}
 						</div>
@@ -94,19 +75,19 @@ const BornThisMonth = () => {
 					className="sm:px-5 md:px-12 px-24 my-20"
 				>
 					<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-						{dummyCelebrities.map((celebrity) => {
+						{data.map((celebrity) => {
 							return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 						})}
 					</div>
 				</section>
 				<Autoscroll />
-				<section className="px-24 md:px-12 sm:px-5 py-20 lg:py-10">
+				{/* <section className="px-24 md:px-12 sm:px-5 py-20 lg:py-10">
 					<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
 						{dummyCelebrities.map((celebrity) => {
 							return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 						})}
 					</div>
-				</section>
+				</section> */}
 				<section
 					id=""
 					className="grid grid-cols-2 items-center mt-20 sm:mt-10 sm:mb-20 mb-40 px-24 md:px-12 sm:px-5 lg:grid-cols-1"
@@ -135,16 +116,25 @@ const BornThisMonth = () => {
 						))}
 					</div>
 				</section>
-				<section className="px-24 md:px-12 sm:px-5 py-20 lg:py-10">
+				{/* <section className="px-24 md:px-12 sm:px-5 py-20 lg:py-10">
 					<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
 						{dummyCelebrities.map((celebrity) => {
 							return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 						})}
 					</div>
-				</section>
+				</section> */}
 			</Layout>
 		</>
 	);
+};
+
+const xata = new XataClient();
+
+export const getServerSideProps = async () => {
+	const response = await xata.db.Capricorn.getMany();
+	return {
+		props: { data: JSON.parse(JSON.stringify(response)) },
+	};
 };
 
 export default BornThisMonth;

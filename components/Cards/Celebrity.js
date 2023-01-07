@@ -26,6 +26,9 @@ const Celebrity = ({ celebrity }) => {
 					alt={celebrity.name}
 					className="rounded-t-xl sm:object-cover"
 					fill
+					sizes="(max-width: 768px) 100vw,
+					(max-width: 1200px) 50vw,
+					33vw"
 				/>
 			</div>
 			<div className="content space-y-5 sm:space-y-2 p-5">

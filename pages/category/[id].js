@@ -7,20 +7,21 @@ import CategoryCard from "~/Cards/CategoryCard";
 import Celebrity from "~/Cards/Celebrity";
 import Autoscroll from "~/core/Autoscroll";
 import Layout from "~/layout/Layout";
-
+import { categoryData } from "#/dummy";
 const Category = ({ categoryName, data }) => {
+	const category = categoryData.find((data) => data.id === categoryName);
 	return (
 		<>
 			<Head>
 				<title>Iro - category</title>
 			</Head>
 			<Layout>
-				<section className="px-24 sm:px-5 md:px-12 py-20 lg:py-10">
+				<section className="px-24 sm:px-5 md:px-12 pb-20 pt-10 lg:pb-10 lg:pt-10">
 					<header className="w-full flex flex-col items-center justify-center mb-10">
 						<div className="flex justify-center space-x-3 leading-tight my-4">
 							<Image
 								src={`/${categoryName.toLowerCase()}.svg`}
-								alt="Aries symbol"
+								alt={`${categoryName} symbol`}
 								width={35}
 								height={35}
 							/>
@@ -29,61 +30,34 @@ const Category = ({ categoryName, data }) => {
 							</h2>
 						</div>
 						<p className="text-xl font-medium w-3/4 lg:w-full text-center sm:text-base">
-							Virgos want to help. They are kind, gentle, and supportive friends
-							and lovers who use their incredible intellect and resourcefulness
-							to problem-solve.
+							{category.subheading}
 						</p>
 					</header>
 					<div className="py-20 sm:py-6 grid grid-cols-2 items-center gap-10 lg:grid-cols-1">
-						<div className="w-[80%] sm:w-full lg:mb-10">
-							<h2 className="text-4xl sm:text-[28px] font-semibold mb-8">
+						<div className="w-[95%] sm:w-full lg:mb-10 lg:w-full">
+							<h2 className="text-4xl sm:text-[28px] md:text-2xl font-bold mb-8 lg:text-center">
 								Their Traits
 							</h2>
 							<ul className="space-y-6">
-								<li className="flex items-center">
-									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-										<Image
-											src="/leo_w.svg"
-											alt="leo logo"
-											height={20}
-											width={20}
-										/>
-									</div>
-									<span className="font-medium text-xl sm:text-base">
-										Their imaginations are always flowing, and they express
-										themselves via art.
-									</span>
-								</li>
-								<li className="flex items-center">
-									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-										<Image
-											src="/leo_w.svg"
-											alt="leo logo"
-											height={20}
-											width={20}
-										/>
-									</div>
-									<span className="font-medium text-xl sm:text-base">
-										Virgos are diligent workers who excel at what they do.
-									</span>
-								</li>
-								<li className="flex items-center">
-									<div className="bg-[#E849EB] p-2 rounded-full mr-3">
-										<Image
-											src="/leo_w.svg"
-											alt="leo logo"
-											height={20}
-											width={20}
-										/>
-									</div>
-									<span className="font-medium text-xl sm:text-base">
-										Virgos thrive on academic and intimate connections.
-									</span>
-								</li>
+								{category.traits.map((trait) => (
+									<li className="flex items-center" key={trait}>
+										<div className="bg-[#E849EB] p-2 rounded-full mr-3">
+											<Image
+												src={`/${category.id.toLowerCase()}_w.svg`}
+												alt="leo logo"
+												height={20}
+												width={20}
+											/>
+										</div>
+										<span className="font-medium text-xl sm:text-base">
+											{trait}
+										</span>
+									</li>
+								))}
 							</ul>
 						</div>
 						<div className="grid grid-cols-3 gap-6">
-							{characteristics.map((data) => (
+							{category.words.map((data) => (
 								<CategoryCard data={data} key={data.id} />
 							))}
 						</div>

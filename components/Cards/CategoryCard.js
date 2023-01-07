@@ -1,3 +1,4 @@
+import { capitalize } from "#/utils";
 import Image from "next/image";
 import React from "react";
 
@@ -38,11 +39,18 @@ const CategoryCard = ({ data }) => {
 				} mb-3 sm:mb-2`}
 			>
 				<div className="relative w-[30px] h-[30px] sm:w-[20px] sm:h-[20px]">
-					<Image src={data.path} alt="category symbol" fill />
+					<Image
+						src={data.path}
+						alt="category symbol"
+						fill
+						sizes="(max-width: 768px) 100vw,
+						(max-width: 1200px) 50vw,
+						33vw"
+					/>
 				</div>
 			</div>
 			<p className="text-lg font-semibold sm:text-sm text-center">
-				{data.label}
+				{capitalize(data.label)}
 			</p>
 		</div>
 	);
