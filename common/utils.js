@@ -19,7 +19,7 @@ export const capitalize = (text) => {
  */
 
 export const truncate = (text, num) => {
-	if (text.length <= num) {
+	if (text && text.length <= num) {
 		return text;
 	}
 	return text.slice(0, num) + "...";
