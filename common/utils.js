@@ -22,5 +22,7 @@ export const truncate = (text, num) => {
 	if (text && text.length <= num) {
 		return text;
 	}
-	return text.slice(0, num) + "...";
+	if (text) {
+		return text.slice(0, num) + "...";
+	}
 };
