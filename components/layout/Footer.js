@@ -12,14 +12,28 @@ const Footer = () => {
 						<Link href="https://github.com/Kwesi-dev/Iro" target="_blank">
 							<li className="underline cursor-pointer">Code on Github</li>
 						</Link>
-						<Link href="https://vercel.com/" target="_blank">
-							<li className="underline cursor-pointer">Powered by Vercel</li>
-						</Link>
+						<li className="flex">
+							<p className="cursor-pointer mr-2">Powered by</p>
+							<div className="cursor-pointer font-semibold flex space-x-1.5">
+								<Link href="https://vercel.com/" target="_blank">
+									<p className="underline">Vercel </p>
+								</Link>
+								<p>&</p>
+								<Link
+									href="https://xata.io/docs/intro/getting-started"
+									target="_blank"
+								>
+									<p className="underline"> Xata</p>
+								</Link>
+							</div>
+						</li>
 						<PopupButton id="rXv5FPQf" className="my-button">
 							<li className="underline cursor-pointer">Give a feedback</li>
 						</PopupButton>
 					</ul>
-					<p>JAMstack</p>
+					<Link href="https://jamstack.org" target="_blank">
+						<p className="hover:underline">JAMstack</p>
+					</Link>
 				</div>
 				<div className="w-full hidden md:flex mb-2 text-lg md:mb-10">
 					<div className="w-full md:flex justify-between items-center sm:text-[15px]">
@@ -52,7 +66,9 @@ const Footer = () => {
 				</div>
 				<p className="hidden md:block w-full text-center mb-2">
 					&copy; Iro 2022 :{" "}
-					<strong className="font-semibold underline">JAMstack</strong>
+					<Link href="https://jamstack.org" target="_blank">
+						<strong className="font-semibold underline">JAMstack</strong>
+					</Link>
 				</p>
 				<p className="w-full text-center text-sm">
 					No pixels was harm 💔 in production of this project{" "}
