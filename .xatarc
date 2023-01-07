@@ -1,7 +1,8 @@
 {
-  "databaseURL": "https://Kwesi-Afriyie-s-workspace-3frc7o.us-east-1.xata.sh/db/Iro",
-  "codegen": {
-    "output": "utils/xata.js",
-    "moduleType": "esm"
-  }
+	"databaseURL": "https://Kwesi-Afriyie-s-workspace-3frc7o.us-east-1.xata.sh/db/Iro",
+	"codegen": {
+		"output": "utils/xata.js",
+		"moduleType": "esm",
+		"declarations": true
+	}
 }

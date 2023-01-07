@@ -11,10 +11,7 @@ const Celebrity = ({ celebrity }) => {
 		date.getDay() === 0 ? 1 : date.getDay()
 	} ${month} ${date.getFullYear()}`;
 
-	const truncatedDesc = truncate(
-		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas veritatis rem amet obcaecati explicabo dolorum mollitia molestiae nisi tempore",
-		50
-	);
+	const truncatedDesc = truncate(celebrity.description, 50);
 	return (
 		<div
 			key={celebrity.id}
@@ -67,7 +64,7 @@ const Celebrity = ({ celebrity }) => {
 				<p className="font-medium sm:text-sm">
 					{truncatedDesc}
 					<a
-						href="http://wikipedia.com"
+						href={celebrity.wikipedia_link}
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label={`Read more about ${celebrity.name}`}

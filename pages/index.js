@@ -23,8 +23,28 @@ export default function Home({ ariesData, scorpioData, libraData }) {
 				/>
 				<meta
 					name="keywords"
-					content="Motivation Inspiration Achievement Zodiac Sign"
+					content="Motivation, Inspiration, Achievement. Zodiac Sign"
 				/>
+				{/* facebook */}
+				<meta property="og:url" content="https://iro-ecru.vercel.app/" />
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content="Iro" />
+				<meta
+					property="og:description"
+					content="Iro is a simple website that inspires people to look up to leaders, celebrities, icons, and public figures based on their DOB. with Iro you can see their achievements and field of work"
+				/>
+				<meta property="og:image" content="/open-graph.webp" />
+
+				{/* Twitter */}
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta property="twitter:domain" content="iro-ecru.vercel.app" />
+				<meta property="twitter:url" content="https://iro-ecru.vercel.app/" />
+				<meta name="twitter:title" content="Iro" />
+				<meta
+					name="twitter:description"
+					content="Iro is a simple website that inspires people to look up to leaders, celebrities, icons, and public figures based on their DOB. with Iro you can see their achievements and field of work"
+				/>
+				<meta name="twitter:image" content="/open-graph.webp" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
