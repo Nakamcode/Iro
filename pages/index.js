@@ -11,7 +11,7 @@ import Autoscroll from "~/core/Autoscroll";
 import { XataClient } from "$$/xata";
 import Link from "next/link";
 import { useRouter } from "next/router";
-export default function Home({ ariesData, scorpioData }) {
+export default function Home({ ariesData, scorpioData, libraData }) {
 	const router = useRouter();
 	return (
 		<>
@@ -176,7 +176,7 @@ export default function Home({ ariesData, scorpioData }) {
 							and successful people overall.
 						</p>
 						<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-							{dummyCelebrities.map((celebrity) => {
+							{libraData.map((celebrity) => {
 								return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 							})}
 						</div>
@@ -232,15 +232,17 @@ export default function Home({ ariesData, scorpioData }) {
 const xata = new XataClient();
 
 export const getServerSideProps = async () => {
-	const [ariesData, scorpioData] = await Promise.all([
+	const [ariesData, scorpioData, libraData] = await Promise.all([
 		xata.db.Aries.getMany(),
 		xata.db.Scorpio.getMany(),
+		xata.db.Libra.getMany(),
 	]);
 
 	return {
 		props: {
 			ariesData: JSON.parse(JSON.stringify(ariesData)),
 			scorpioData: JSON.parse(JSON.stringify(scorpioData)),
+			libraData: JSON.parse(JSON.stringify(libraData)),
 		},
 	};
 };

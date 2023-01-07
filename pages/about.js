@@ -56,7 +56,12 @@ const About = () => {
 									/>
 								</div>
 								<div className="flex items-center pl-3 mt-2 space-x-4">
-									<Image src="/leo.svg" alt="leo logo" width={20} height={20} />
+									<Image
+										src="/capricorn.svg"
+										alt="leo logo"
+										width={20}
+										height={20}
+									/>
 									<span className="text-lg font-semibold">
 										Afriyie Samuel Kwesi
 									</span>
@@ -98,8 +103,8 @@ const About = () => {
 							<li className="flex items-center">
 								<div className="bg-[#E849EB] p-2 rounded-full mr-3">
 									<Image
-										src="/leo_w.svg"
-										alt="leo logo"
+										src="/capricorn_w.svg"
+										alt="capricorn logo"
 										height={20}
 										width={20}
 									/>
@@ -112,8 +117,8 @@ const About = () => {
 							<li className="flex items-center">
 								<div className="bg-[#E849EB] p-2 rounded-full mr-3">
 									<Image
-										src="/leo_w.svg"
-										alt="leo logo"
+										src="/capricorn_w.svg"
+										alt="capricorn logo"
 										height={20}
 										width={20}
 									/>
@@ -126,8 +131,8 @@ const About = () => {
 							<li className="flex items-center">
 								<div className="bg-[#E849EB] p-2 rounded-full mr-3">
 									<Image
-										src="/leo_w.svg"
-										alt="leo logo"
+										src="/capricorn_w.svg"
+										alt="capricorn logo"
 										height={20}
 										width={20}
 									/>

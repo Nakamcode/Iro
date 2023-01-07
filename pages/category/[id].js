@@ -12,7 +12,7 @@ const Category = ({ categoryName, data }) => {
 	return (
 		<>
 			<Head>
-				<title>Iro - {categoryName}</title>
+				<title>Iro - category</title>
 			</Head>
 			<Layout>
 				<section className="px-24 sm:px-5 md:px-12 py-20 lg:py-10">
@@ -162,6 +162,14 @@ export const getServerSideProps = async ({ query }) => {
 		res = await xata.db.Aries.getMany();
 	} else if (id === "Capricorn") {
 		res = await xata.db.Capricorn.getMany();
+	} else if (id === "Libra") {
+		res = await xata.db.Libra.getMany();
+	} else if (id === "Taurus") {
+		res = await xata.db.Taurus.getMany();
+	} else if (id === "Virgo") {
+		res = await xata.db.Virgo.getMany();
+	} else if (id === "Gemini") {
+		res = await xata.db.Gemini.getMany();
 	} else {
 		return;
 	}

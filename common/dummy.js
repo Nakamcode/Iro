@@ -228,37 +228,37 @@ export const portfolioCategories = [
 		id: 1,
 		label: "FE Developer",
 		name: "Pisces",
-		path: "/leo_w.svg",
+		path: "/capricorn_w.svg",
 	},
 	{
 		id: 2,
 		label: "Typescript",
 		name: "Capricorn",
-		path: "/leo_w.svg",
+		path: "/capricorn_w.svg",
 	},
 	{
 		id: 3,
 		name: "Leo",
 		label: "Team Player",
-		path: "/leo_w.svg",
+		path: "/capricorn_w.svg",
 	},
 	{
 		id: 4,
 		name: "Arial",
 		label: "Opensource",
-		path: "/leo_w.svg",
+		path: "/capricorn_w.svg",
 	},
 	{
 		id: 5,
 		name: "Scorpio",
 		label: "Javascript",
-		path: "/leo_w.svg",
+		path: "/capricorn_w.svg",
 	},
 	{
 		id: 6,
 		name: "Libra",
 		label: "Community",
-		path: "/leo_w.svg",
+		path: "/capricorn_w.svg",
 	},
 ];
 

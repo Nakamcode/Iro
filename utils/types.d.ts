@@ -38,6 +38,14 @@ declare const tables: readonly [
 			{
 				readonly name: "description";
 				readonly type: "text";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
 			}
 		];
 	},
@@ -57,10 +65,6 @@ declare const tables: readonly [
 				readonly type: "datetime";
 			},
 			{
-				readonly name: "Status";
-				readonly type: "string";
-			},
-			{
 				readonly name: "sign";
 				readonly type: "string";
 			},
@@ -75,6 +79,18 @@ declare const tables: readonly [
 			{
 				readonly name: "age";
 				readonly type: "int";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "status";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
 			}
 		];
 	},
@@ -116,6 +132,10 @@ declare const tables: readonly [
 			{
 				readonly name: "imageURL";
 				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
 			}
 		];
 	},
@@ -153,6 +173,14 @@ declare const tables: readonly [
 			{
 				readonly name: "description";
 				readonly type: "text";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
 			}
 		];
 	},
@@ -190,6 +218,14 @@ declare const tables: readonly [
 			{
 				readonly name: "description";
 				readonly type: "text";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
 			}
 		];
 	},
@@ -227,6 +263,14 @@ declare const tables: readonly [
 			{
 				readonly name: "description";
 				readonly type: "text";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
 			}
 		];
 	},
@@ -264,6 +308,239 @@ declare const tables: readonly [
 			{
 				readonly name: "description";
 				readonly type: "text";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
+			}
+		];
+	},
+	{
+		readonly name: "Libra";
+		readonly columns: readonly [
+			{
+				readonly name: "name";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_place";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_date";
+				readonly type: "datetime";
+			},
+			{
+				readonly name: "status";
+				readonly type: "string";
+			},
+			{
+				readonly name: "age";
+				readonly type: "int";
+			},
+			{
+				readonly name: "description";
+				readonly type: "text";
+			},
+			{
+				readonly name: "gender";
+				readonly type: "string";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
+			},
+			{
+				readonly name: "sign";
+				readonly type: "string";
+			}
+		];
+	},
+	{
+		readonly name: "Pisces";
+		readonly columns: readonly [
+			{
+				readonly name: "name";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_place";
+				readonly type: "string";
+			},
+			{
+				readonly name: "status";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_date";
+				readonly type: "datetime";
+			},
+			{
+				readonly name: "gender";
+				readonly type: "string";
+			},
+			{
+				readonly name: "age";
+				readonly type: "int";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
+			},
+			{
+				readonly name: "description";
+				readonly type: "text";
+			},
+			{
+				readonly name: "sign";
+				readonly type: "string";
+			}
+		];
+	},
+	{
+		readonly name: "Virgo";
+		readonly columns: readonly [
+			{
+				readonly name: "name";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_date";
+				readonly type: "datetime";
+			},
+			{
+				readonly name: "birth_place";
+				readonly type: "string";
+			},
+			{
+				readonly name: "status";
+				readonly type: "string";
+			},
+			{
+				readonly name: "sign";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "age";
+				readonly type: "int";
+			},
+			{
+				readonly name: "description";
+				readonly type: "text";
+			},
+			{
+				readonly name: "gender";
+				readonly type: "string";
+			}
+		];
+	},
+	{
+		readonly name: "Taurus";
+		readonly columns: readonly [
+			{
+				readonly name: "name";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_place";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_date";
+				readonly type: "datetime";
+			},
+			{
+				readonly name: "status";
+				readonly type: "string";
+			},
+			{
+				readonly name: "sign";
+				readonly type: "string";
+			},
+			{
+				readonly name: "age";
+				readonly type: "int";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "description";
+				readonly type: "text";
+			},
+			{
+				readonly name: "gender";
+				readonly type: "string";
+			}
+		];
+	},
+	{
+		readonly name: "Gemini";
+		readonly columns: readonly [
+			{
+				readonly name: "name";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_place";
+				readonly type: "string";
+			},
+			{
+				readonly name: "birth_date";
+				readonly type: "datetime";
+			},
+			{
+				readonly name: "status";
+				readonly type: "string";
+			},
+			{
+				readonly name: "sign";
+				readonly type: "string";
+			},
+			{
+				readonly name: "age";
+				readonly type: "int";
+			},
+			{
+				readonly name: "gender";
+				readonly type: "string";
+			},
+			{
+				readonly name: "imageURL";
+				readonly type: "string";
+			},
+			{
+				readonly name: "wikipedia_link";
+				readonly type: "string";
+			},
+			{
+				readonly name: "description";
+				readonly type: "text";
 			}
 		];
 	}
@@ -284,6 +561,16 @@ export type Cancer = InferredTypes["Cancer"];
 export type CancerRecord = Cancer & XataRecord;
 export type Leo = InferredTypes["Leo"];
 export type LeoRecord = Leo & XataRecord;
+export type Libra = InferredTypes["Libra"];
+export type LibraRecord = Libra & XataRecord;
+export type Pisces = InferredTypes["Pisces"];
+export type PiscesRecord = Pisces & XataRecord;
+export type Virgo = InferredTypes["Virgo"];
+export type VirgoRecord = Virgo & XataRecord;
+export type Taurus = InferredTypes["Taurus"];
+export type TaurusRecord = Taurus & XataRecord;
+export type Gemini = InferredTypes["Gemini"];
+export type GeminiRecord = Gemini & XataRecord;
 export type DatabaseSchema = {
 	Aquarius: AquariusRecord;
 	Capricorn: CapricornRecord;
@@ -292,6 +579,11 @@ export type DatabaseSchema = {
 	Sagittarius: SagittariusRecord;
 	Cancer: CancerRecord;
 	Leo: LeoRecord;
+	Libra: LibraRecord;
+	Pisces: PiscesRecord;
+	Virgo: VirgoRecord;
+	Taurus: TaurusRecord;
+	Gemini: GeminiRecord;
 };
 declare const DatabaseClient: any;
 export declare class XataClient extends DatabaseClient<DatabaseSchema> {
