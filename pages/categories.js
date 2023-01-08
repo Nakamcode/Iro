@@ -1,4 +1,5 @@
-import { categories, dummyCelebrities } from "#/dummy";
+import { categories, categoryData, dummyCelebrities } from "#/dummy";
+import { XataClient } from "$$/xata";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,8 +11,9 @@ import Autoscroll from "~/core/Autoscroll";
 import Button from "~/core/Button";
 import Layout from "~/layout/Layout";
 
-const Categories = () => {
+const Categories = ({ data }) => {
 	const router = useRouter();
+	const category = categoryData.find((data) => data.id === "Capricorn");
 	return (
 		<>
 			<Head>
@@ -42,24 +44,27 @@ const Categories = () => {
 					className="sm:px-5 md:px-12 px-24 py-20 lg:py-10"
 				>
 					<div className="flex justify-center space-x-3 leading-tight my-4">
-						<Image src="/aries.svg" alt="Aries symbol" width={35} height={35} />
+						<Image
+							src={`/${category.id.toLocaleLowerCase()}.svg`}
+							alt={`${category.id} symbol`}
+							width={35}
+							height={35}
+						/>{" "}
 						<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-semibold">
-							Born Today
+							Born This Month
 						</h2>
 					</div>
 					<p className="text-center w-3/4 sm:w-full mx-auto mb-8 text-xl sm:text-base font-medium">
-						Aries is a passionate, motivated, and confident leader who builds
-						community with their cheerful disposition and relentless
-						determination.
+						{category.subheading}
 					</p>
 					<div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-						{dummyCelebrities.map((celebrity) => {
+						{data.map((celebrity) => {
 							return <Celebrity celebrity={celebrity} key={celebrity.id} />;
 						})}
 					</div>
 					<Button
 						className="mt-8 sm:w-full py-3 px-10 w-[30%]"
-						onClick={() => router.push("/category/Aries")}
+						onClick={() => router.push(`/category/${category.id}`)}
 					>
 						More
 					</Button>
@@ -67,6 +72,15 @@ const Categories = () => {
 			</Layout>
 		</>
 	);
+};
+
+const xata = new XataClient();
+
+export const getServerSideProps = async () => {
+	const response = await xata.db.Capricorn.getMany();
+	return {
+		props: { data: JSON.parse(JSON.stringify(response)) },
+	};
 };
 
 export default Categories;
