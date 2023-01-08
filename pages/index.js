@@ -19,7 +19,7 @@ export default function Home({ ariesData, scorpioData, libraData }) {
 				<title>Iro</title>
 				<meta
 					name="description"
-					content="Iro is a simple website that inspires people to look up to leaders, celebrities, icons, and public figures based on their DOB. with Iro you can see their achievements and field of work"
+					content="Welcome to Iro, the astrology-based motivation platform to help you reach your goals and dreams and stay inspired."
 				/>
 				<meta
 					name="keywords"
@@ -31,7 +31,7 @@ export default function Home({ ariesData, scorpioData, libraData }) {
 				<meta property="og:title" content="Iro" />
 				<meta
 					property="og:description"
-					content="Iro is a simple website that inspires people to look up to leaders, celebrities, icons, and public figures based on their DOB. with Iro you can see their achievements and field of work"
+					content="Welcome to Iro, the astrology-based motivation platform to help you reach your goals and dreams and stay inspired."
 				/>
 				<meta property="og:image" content="/open-graph.webp" />
 
@@ -42,7 +42,7 @@ export default function Home({ ariesData, scorpioData, libraData }) {
 				<meta name="twitter:title" content="Iro" />
 				<meta
 					name="twitter:description"
-					content="Iro is a simple website that inspires people to look up to leaders, celebrities, icons, and public figures based on their DOB. with Iro you can see their achievements and field of work"
+					content="Welcome to Iro, the astrology-based motivation platform to help you reach your goals and dreams and stay inspired."
 				/>
 				<meta name="twitter:image" content="/open-graph.webp" />
 				<link rel="icon" href="/favicon.ico" />

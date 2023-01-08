@@ -80,16 +80,15 @@ const About = () => {
 					</div>
 					<div className="hidden lg:block space-y-6">
 						<p className="text-base font-medium">
-							Lorem Ipsum is simply dummy text of the printing and typesetting
-							industry. Lorem Ipsum has been the industry&apos;s standard dummy
-							text ever since the 1500s, but also the leap into electronic
-							typesetting, remaining essentially unchanged.
+							I built Iro, the astrology-based motivation platform to help
+							people reach their goals and dreams and stay inspired. Astrology
+							can provide a unique and insightful perspective on an
+							individual&apos;s motivations, strengths, and challenges.
 						</p>
 						<p className="text-base font-medium">
-							When an unknown printer took a galley of type and scrambled it to
-							make a type specimen book. It has survived not only five
-							centuries, but also the leap into electronic typesetting,
-							remaining essentially unchanged
+							I want to help people achieve their goals and live more fulfilling
+							lives by using astrological insights to inform the development of
+							personalised motivation and inspiration.
 						</p>
 					</div>
 				</div>
@@ -110,8 +109,8 @@ const About = () => {
 									/>
 								</div>
 								<span className="font-medium text-xl sm:text-base">
-									My aim is to give people the space to be themselves rather
-									than judge them.
+									My mission is to help people reach their full potential
+									through the power of astrology and community.
 								</span>
 							</li>
 							<li className="flex items-center">
@@ -124,8 +123,8 @@ const About = () => {
 									/>
 								</div>
 								<span className="font-medium text-xl sm:text-base">
-									My aim is to give people the space to be themselves rather
-									than judge them.
+									I want to help people achieve their goals and live more
+									fulfilling lives using astrological insights.
 								</span>
 							</li>
 							<li className="flex items-center">
@@ -138,8 +137,8 @@ const About = () => {
 									/>
 								</div>
 								<span className="font-medium text-xl sm:text-base">
-									My aim is to give people the space to be themselves rather
-									than judge them.
+									Create a community platform where users can connect with
+									others who share similar goals and aspirations.{" "}
 								</span>
 							</li>
 						</ul>
