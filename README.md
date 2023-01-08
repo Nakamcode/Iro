@@ -74,7 +74,7 @@ Opensource is the future, and you are welcome if you have any ideas to make this
 
 ## Need Help
 
-    I spent countless hours researching and making all these data entries into the database. If you have an idea on how to do this fast or automate these processes, kindly contribute
+I spent countless hours researching and making all these data entries into the database. If you have an idea on how to do this fast or automate these processes, kindly contribute
 
 ## Licence
 
