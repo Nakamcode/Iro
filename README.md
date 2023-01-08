@@ -25,40 +25,40 @@ Each day, you'll receive motivation and inspiration from the heroes of your astr
 - **Vercel**
   Vercel is the platform for front-end developers, providing the speed and reliability innovators need to create at the moment of inspiration.
 
-[vercel.com](https://vercel.com/)
+  [vercel.com](https://vercel.com/)
 
 - **Xata**
   Xata is a serverless database that comes with frictionless developer experience, a spreadsheet-like UI, and built-in search.
 
-screenshot of xata
+  screenshot of xata
 
-I wanted to build a scalable and reliable platform that could handle many users and provide on-demand personalised astrological data and inspiration. To achieve this, I turned to Xata, a serverless database platform that offers many features, such as a Relational database, Branch & Migration, Powerful search and Fast analytics.
+  I wanted to build a scalable and reliable platform that could handle many users and provide on-demand personalised astrological data and inspiration. To achieve this, I turned to Xata, a serverless database platform that offers many features, such as a Relational database, Branch & Migration, Powerful search and Fast analytics.
 
-Using Xata free tier allowed me to build Iro confidently, knowing that my platform could handle many users and provide personalised data and inspiration on demand. I recommend Xata to anyone looking to build a serverless, scalable, and reliable database platform for their application.
+  Using Xata free tier allowed me to build Iro confidently, knowing that my platform could handle many users and provide personalised data and inspiration on demand. I recommend Xata to anyone looking to build a serverless, scalable, and reliable database platform for their application.
 
-[xata.com](https://xata.io/docs/intro/getting-started)
+  [xata.com](https://xata.io/docs/intro/getting-started)
 
 ## Roadmap
 
-    [*] Complete design
-    [*] Responsive design
-    [*] Setup Xata
-    [*] Setup Cloudinary
-    [*] Add 100 database
-    [*] Open Graph
-    [*] README
+- [*] Complete design
+- [*] Responsive design
+- [*] Setup Xata
+- [*] Setup Cloudinary
+- [*] Add 100 database
+- [*] Open Graph
+- [*] README
 
 ## Upcoming Features
 
-    [] User profile
-    [] Personalised motivation
-    [] Daily Motivation
-    [] Searching functionality
-    [] Add 1000 database
-    [] Goal tracker
-    [] Dark mode
-    [] Daily Horoscope Message
-    [] Zodiac Statistics
+    - [] User profile
+    - [] Personalised motivation
+    - [] Daily Motivation
+    - [] Searching functionality
+    - [] Add 1000 database
+    - [] Goal tracker
+    - [] Dark mode
+    - [] Daily Horoscope Message
+    - [] Zodiac Statistics
 
 ## Tech Stack
 
