@@ -22,13 +22,15 @@ Each day, you'll receive motivation and inspiration from the heroes of your astr
 
 ## Tools I Used
 
-- **Vercel**
+- ### Vercel
+
   Vercel is the platform for front-end developers, providing the speed and reliability innovators need to create at the moment of inspiration.
 
   [vercel.com](https://vercel.com/)
 
-- **Xata**
-  Xata is a serverless database that comes with frictionless developer experience, a spreadsheet-like UI, and built-in search.
+- ### Xata
+
+  Xata is a serverless database that comes with **frictionless developer experience**, a **spreadsheet-like UI**, and **built-in search**.
 
   screenshot of xata
 
