@@ -17,7 +17,7 @@ const CategoryCard = ({ data }) => {
 						? "bg-[#5CCAA9]"
 						: data.name === "Leo"
 						? "bg-[#5C95CA]"
-						: data.name === "Arial"
+						: data.name === "Aries"
 						? "bg-[#CA8A5C]"
 						: data.name === "Scorpio"
 						? "bg-[#CA5C5C]"

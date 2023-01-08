@@ -148,8 +148,8 @@ export const categories = [
 	},
 	{
 		id: 7,
-		name: "Arial",
-		label: "Arial",
+		name: "Aries",
+		label: "Aries",
 		path: "/aries_w.svg",
 	},
 	{
@@ -205,8 +205,8 @@ export const heroCategories = [
 	},
 	{
 		id: 4,
-		name: "Arial",
-		label: "Arial",
+		name: "Aries",
+		label: "Aries",
 		path: "/aries_w.svg",
 	},
 	{
@@ -244,7 +244,7 @@ export const portfolioCategories = [
 	},
 	{
 		id: 4,
-		name: "Arial",
+		name: "Aries",
 		label: "Opensource",
 		path: "/capricorn_w.svg",
 	},
@@ -283,7 +283,7 @@ export const aims = [
 	},
 	{
 		id: 4,
-		name: "Arial",
+		name: "Aries",
 		label: "Colaboration",
 		path: "/aries_w.svg",
 	},
@@ -387,7 +387,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Persistent",
 				path: "/taurus_w.svg",
 			},
@@ -436,7 +436,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Ambitious",
 				path: "/leo_w.svg",
 			},
@@ -485,7 +485,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Fair",
 				path: "/libra_w.svg",
 			},
@@ -534,7 +534,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Confident",
 				path: "/aries_w.svg",
 			},
@@ -583,7 +583,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Progressive",
 				path: "/aquarius_w.svg",
 			},
@@ -632,7 +632,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "protective",
 				path: "/cancer_w.svg",
 			},
@@ -681,7 +681,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Adaptable",
 				path: "/gemini_w.svg",
 			},
@@ -730,7 +730,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Curious",
 				path: "/sagittarius_w.svg",
 			},
@@ -779,7 +779,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "sensitive",
 				path: "/pisces_w.svg",
 			},
@@ -828,7 +828,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Patient",
 				path: "/capricorn_w.svg",
 			},
@@ -877,7 +877,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Intense",
 				path: "/scorpio_w.svg",
 			},
@@ -926,7 +926,7 @@ export const categoryData = [
 			},
 			{
 				id: 4,
-				name: "Arial",
+				name: "Aries",
 				label: "Hardworking",
 				path: "/virgo_w.svg",
 			},
