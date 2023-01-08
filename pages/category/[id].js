@@ -144,6 +144,8 @@ export const getServerSideProps = async ({ query }) => {
 		res = await xata.db.Virgo.getMany();
 	} else if (id === "Gemini") {
 		res = await xata.db.Gemini.getMany();
+	} else if (id === "Pisces") {
+		res = await xata.db.Pisces.getMany();
 	} else {
 		return;
 	}
