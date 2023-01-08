@@ -1,6 +1,6 @@
 ## Introduction
 
-![logo](https://res.cloudinary.com/dyt4jkv6w/image/upload/v1673192164/logo_wdyxcg.png)
+![logo](https://res.cloudinary.com/dyt4jkv6w/image/upload/v1673192974/Iro_Logo_r4lcwx.png)
 
 Welcome to Iro, the astrology-based motivation platform to help you reach your goals and dreams and stay inspired.
 
@@ -32,7 +32,7 @@ Each day, you'll receive motivation and inspiration from the heroes of your astr
 
   Xata is a serverless database that comes with **frictionless developer experience**, a **spreadsheet-like UI**, and **built-in search**.
 
-  screenshot of xata
+  ![screenshots](https://res.cloudinary.com/dyt4jkv6w/image/upload/v1673192977/Xata_Mockup_jqofjp.png)
 
   I wanted to build a scalable and reliable platform that could handle many users and provide on-demand personalised astrological data and inspiration. To achieve this, I turned to Xata, a serverless database platform that offers many features, such as a Relational database, Branch & Migration, Powerful search and Fast analytics.
 
