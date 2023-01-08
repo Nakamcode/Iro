@@ -1,6 +1,6 @@
 ## Introduction
 
-logo
+![logo](https://res.cloudinary.com/dyt4jkv6w/image/upload/v1673192164/logo_wdyxcg.png)
 
 Welcome to Iro, the astrology-based motivation platform to help you reach your goals and dreams and stay inspired.
 
