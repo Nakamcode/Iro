@@ -40,25 +40,25 @@ Each day, you'll receive motivation and inspiration from the heroes of your astr
 
 ## Roadmap
 
-- [*] Complete design
-- [*] Responsive design
-- [*] Setup Xata
-- [*] Setup Cloudinary
-- [*] Add 100 database
-- [*] Open Graph
-- [*] README
+- [x] Complete design
+- [x] Responsive design
+- [x] Setup Xata
+- [x] Setup Cloudinary
+- [x] Add 100 database
+- [x] Open Graph
+- [x] README
 
 ## Upcoming Features
 
-    - [] User profile
-    - [] Personalised motivation
-    - [] Daily Motivation
-    - [] Searching functionality
-    - [] Add 1000 database
-    - [] Goal tracker
-    - [] Dark mode
-    - [] Daily Horoscope Message
-    - [] Zodiac Statistics
+- [ ] User profile
+- [ ] Personalised motivation
+- [ ] Daily Motivation
+- [ ] Searching functionality
+- [ ] Add 1000 database
+- [ ] Goal tracker
+- [ ] Dark mode
+- [ ] Daily Horoscope Message
+- [ ] Zodiac Statistics
 
 ## Tech Stack
 
