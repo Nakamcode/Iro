@@ -4,7 +4,7 @@ logo
 
 Welcome to Iro, the astrology-based motivation platform to help you reach your goals and dreams and stay inspired.
 
-screenshots
+![screenshots](https://res.cloudinary.com/dyt4jkv6w/image/upload/v1673191863/Iro-Mockup_tkvbam.webp)
 
 Do you find it hard to know the zodiac sign of your favourite superstar or their birthdate and where they were born? Surf through superstars, celebrities, footballers, musicians, leaders, actors, etc., categorised by their zodiac signs
 
@@ -74,7 +74,7 @@ Opensource is the future, and you are welcome if you have any ideas to make this
 
 ## Need Help
 
-    * I spent countless hours researching and making all these data entries into the database. If you have an idea on how to do this fast or automate these processes, kindly contribute
+    I spent countless hours researching and making all these data entries into the database. If you have an idea on how to do this fast or automate these processes, kindly contribute
 
 ## Licence
 
