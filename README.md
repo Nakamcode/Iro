@@ -79,5 +79,4 @@ I spent countless hours researching and making all these data entries into the d
 ## Licence
 
 The MIT License (MIT)
-
 Copyright (c) <year> Iro
