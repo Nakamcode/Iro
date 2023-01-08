@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Introduction
 
-## Getting Started
+logo
 
-First, run the development server:
+Welcome to Iro, the astrology-based motivation platform to help you reach your goals and dreams and stay inspired.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+screenshots
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Do you find it hard to know the zodiac sign of your favourite superstar or their birthdate and where they were born? Surf through superstars, celebrities, footballers, musicians, leaders, actors, etc., categorised by their zodiac signs
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Iro Official Website [Iro](https://iro-ecru.vercel.app/)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Usage
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Discover the power of astrology and your zodiac sign with Iro, the ultimate motivation platform. With a wide range of categories to choose from, you'll find inspiration and motivation explicitly tailored to you.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Explore the traits and characteristics associated with your astrological sign, and let Iro guide you on the path to success.
 
-## Learn More
+Each day, you'll receive motivation and inspiration from the heroes of your astrological sign, as well as practical advice and guidance on achieving your goals. Plus, with our powerful goal-setting and tracking tools, you'll be able to stay on track and measure your progress along the way.
 
-To learn more about Next.js, take a look at the following resources:
+**(Feature coming soon)**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tools I Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Vercel**
+  Vercel is the platform for front-end developers, providing the speed and reliability innovators need to create at the moment of inspiration.
 
-## Deploy on Vercel
+[vercel.com](https://vercel.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Xata**
+  Xata is a serverless database that comes with frictionless developer experience, a spreadsheet-like UI, and built-in search.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+screenshot of xata
+
+I wanted to build a scalable and reliable platform that could handle many users and provide on-demand personalised astrological data and inspiration. To achieve this, I turned to Xata, a serverless database platform that offers many features, such as a Relational database, Branch & Migration, Powerful search and Fast analytics.
+
+Using Xata free tier allowed me to build Iro confidently, knowing that my platform could handle many users and provide personalised data and inspiration on demand. I recommend Xata to anyone looking to build a serverless, scalable, and reliable database platform for their application.
+
+[xata.com](https://xata.io/docs/intro/getting-started)
+
+## Roadmap
+
+    [*] Complete design
+    [*] Responsive design
+    [*] Setup Xata
+    [*] Setup Cloudinary
+    [*] Add 100 database
+    [*] Open Graph
+    [*] README
+
+## Upcoming Features
+
+    [] User profile
+    [] Personalised motivation
+    [] Daily Motivation
+    [] Searching functionality
+    [] Add 1000 database
+    [] Goal tracker
+    [] Dark mode
+    [] Daily Horoscope Message
+    [] Zodiac Statistics
+
+## Tech Stack
+
+    1. Nextjs
+    2. Tailwindcss
+    3. Javascript
+
+## Contribution
+
+Opensource is the future, and you are welcome if you have any ideas to make this project successful. Whether you know your zodiac sign or not, all contributions are accepted.
+
+## Need Help
+
+    * I spent countless hours researching and making all these data entries into the database. If you have an idea on how to do this fast or automate these processes, kindly contribute
+
+## Licence
+
+MIT
