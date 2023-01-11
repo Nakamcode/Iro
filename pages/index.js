@@ -90,7 +90,7 @@ export default function Home({ ariesData, scorpioData, libraData }) {
 								width={35}
 								height={35}
 							/>
-							<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-semibold font-display">
+							<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-bold">
 								Aries Celebrities
 							</h2>
 						</div>
@@ -124,7 +124,7 @@ export default function Home({ ariesData, scorpioData, libraData }) {
 								width={35}
 								height={35}
 							/>
-							<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-semibold font-display">
+							<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-bold">
 								Scorpio Celebrities
 							</h2>
 						</div>
@@ -186,7 +186,7 @@ export default function Home({ ariesData, scorpioData, libraData }) {
 								width={35}
 								height={35}
 							/>
-							<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-semibold font-display">
+							<h2 className="sm:text-xl md:text-2xl text-4xl text-center font-bold">
 								Libra Celebrities
 							</h2>
 						</div>

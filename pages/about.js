@@ -23,7 +23,7 @@ const About = () => {
 						</h1>
 						<p className="text-xl font-medium w-full text-center sm:text-base">
 							Finding inspiration based on your zodiac sign is something I am
-							are passionate about.
+							passionate about.
 						</p>
 					</header>
 					<div className="grid grid-cols-2 lg:grid-cols-1 gap-10 items-center sm:mb-10">
