@@ -26,8 +26,8 @@ const Categories = ({ data }) => {
 							Categories
 						</h1>
 						<p className="text-xl sm:text-base font-medium text-center">
-							Finding inspiration based on your zodiac sign is something I am
-							are passionate about.
+							There are a number of categories of signs that you can explore in
+							order to get inspiration and motivation.
 						</p>
 					</header>
 					<div className="grid grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 gap-6">
